@@ -1,0 +1,160 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+    provider        = "prisma-client-js"
+}
+
+datasource db {
+    provider        = "mysql"
+    url             = env("DATABASE_URL")
+}
+
+enum RegistrationStatus {
+    NEW
+    ACCEPTED
+    REJECTED
+}
+
+model Registration {
+    id                                  String                  @id @default(uuid())
+    title                               String
+    firstName                           String
+    middleName                          String?
+    lastName                            String
+    sex                                 String
+    dateOfBirth                         DateTime
+    email                               String
+    phone                               String
+    address1                            String
+    address2                            String?
+    city                                String
+    province                            String
+    zip                                 String
+    country                             String
+    status                              RegistrationStatus      @default(NEW)
+
+    deleted                             Boolean                 @default(false)
+    updatedAt                           DateTime                @updatedAt @default(now())
+    createdAt                           DateTime                @default(now())
+}
+
+enum CaseStatus {
+    UNREAD
+    READ
+}
+
+model Case {
+    id                                  String                  @id @default(uuid())
+    source                              String
+    name                                String
+    email                               String
+    phone                               String
+    subject                             String
+    message                             String
+    status                              CaseStatus              @default(UNREAD)
+
+    deleted                             Boolean                 @default(false)
+    updatedAt                           DateTime                @updatedAt @default(now())
+    createdAt                           DateTime                @default(now())
+}
+
+enum UserRole {
+    MEMBER
+    ADMIN
+}
+
+model Role {
+    id                                  String                  @id @default(uuid())
+    title                               UserRole                @unique
+    accessLevel                         Int
+
+    user                                User[]
+
+    deleted                             Boolean                 @default(false)
+    updatedAt                           DateTime                @updatedAt @default(now())
+    createdAt                           DateTime                @default(now())
+
+    @@unique([id, title], name: "uniqueRole")
+}
+
+model User {
+    id                                  String                  @id @default(uuid())
+    userId                              Int
+    title                               String
+    firstName                           String
+    middleName                          String?
+    lastName                            String
+    sex                                 String
+    dateOfBirth                         DateTime
+    email                               String
+    emailVerifiedAt                     DateTime?
+    phone                               String
+    sin                                 String
+    active                              Boolean                 @default(false)
+    address1                            String
+    address2                            String?
+    city                                String
+    province                            String
+    zip                                 String
+    country                             String
+    lat                                 Float?
+    lng                                 Float?
+
+    role                                Role                    @relation(fields: [roleId], references: [id])
+    roleId                              String
+    planSubscription                    PlanSubscription?
+
+    deleted                             Boolean                 @default(false)
+    updatedAt                           DateTime                @updatedAt @default(now())
+    createdAt                           DateTime                @default(now())
+}
+
+enum PlanFrequency {
+    MONTHLY
+    YEARLY
+}
+
+model Plan {
+    id                                  String                  @id @default(uuid())
+    title                               String
+    description                         String
+    price                               Int
+    frequency                           PlanFrequency
+    renewalDay                          Int?
+    renewalMonth                        Int?
+    renewalYear                         Int?
+
+    planSubscription                    PlanSubscription[]
+
+    deleted                             Boolean                 @default(false)
+    updatedAt                           DateTime                @updatedAt @default(now())
+    createdAt                           DateTime                @default(now())
+}
+
+enum PlanSubscriptionStatus {
+    ACTIVE
+    INACTIVE
+}
+
+model PlanSubscription {
+    id                                  String                  @id @default(uuid())
+    startDate                           DateTime
+    endDate                             DateTime?
+    externalId                          String?
+    active                              Boolean                 @default(false)
+
+    user                                User                    @relation(fields: [userId], references: [id])
+    userId                              String                  @unique
+    plan                                Plan                    @relation(fields: [planId], references: [id])
+    planId                              String
+
+    deleted                             Boolean                 @default(false)
+    updatedAt                           DateTime                @updatedAt @default(now())
+    createdAt                           DateTime                @default(now())
+
+    @@unique([userId, active], name: "uniqueActiveSubscription")
+}

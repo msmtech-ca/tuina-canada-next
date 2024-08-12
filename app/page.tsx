@@ -1,113 +1,270 @@
 import Image from 'next/image'
+import Button from './_components/Button'
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    return (
+        <div>
+            <div className={`relative`}>
+                <Image
+                    src={`/pexels-cottonbro-studio-7235055.jpg`}
+                    width={1600}
+                    height={900}
+                    alt={`main-splash`}
+                    className={`h-[calc(100vh_-_5rem)] w-full object-cover`}
+                />
+                <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-neutral-950/40 from-0% via-40% to-100% to-transparent`}></div>
+                <div className={`absolute top-1/2 -translate-y-1/2 w-full`}>
+                    <div className={`container mx-auto`}>
+                        <h1 className={`font-serif text-neutral-50 text-7xl leading-none w-3/5 font-bold`}>Empowering Members to Establish and Grow</h1>
+                        <h2 className={`mt-8 text-neutral-50 text-2xl leading-tight w-1/2 font-medium`}>We provide the resources, certification, and support you need to establish and grow successful businesses.</h2>
+                        <Button
+                            to={`/members/register`}
+                            className={`mt-8`}
+                            variant={`dark`}
+                        >Become a member today</Button>
+                    </div>
+                </div>
+            </div>
+            <div className={`bg-neutral-700 text-neutral-50 py-12`}>
+                <div className={`container mx-auto grid grid-cols-3 gap-24 items-center`}>
+                    <div className={`text-2xl font-bold text-center`}>Gain Credibility with Certification</div>
+                    <div className={`text-2xl font-bold text-center`}>Receive Comprehensive Business Support</div>
+                    <div className={`text-2xl font-bold text-center`}>Ensure Client Reimbursement with Insurance Recognition</div>
+                </div>
+            </div>
+            <div className={`py-24`}>
+                <div className={`container mx-auto grid grid-cols-2 gap-8`}>
+                    <div className={`aspect-square overflow-hidden rounded-2xl shadow`}>
+                        <Image
+                            src={`/pexels-anntarazevich-5196821.jpg`}
+                            width={1600}
+                            height={900}
+                            alt={`main-splash`}
+                            className={`h-full w-full object-cover`}
+                        />
+                    </div>
+                    <div className={`flex justify-center items-center`}>
+                        <div className={`container`}>
+                            <h2 className={`text-5xl font-serif font-bold`}>Running a massage clinic is hard enough</h2>
+                            <ul className={`mt-8 list-disc list-outside flex flex-col gap-2 ps-4`}>
+                                <li className={`text-xl`}>It's challenging to be acknowledged by insurance companies.</li>
+                                <li className={`text-xl`}>Handling administrative tasks like accounting, paperwork, legal issues, and tech setup is overwhelming.</li>
+                                <li className={`text-xl`}>Standing out and proving credibility among numerous practitioners is tough.</li>
+                            </ul>
+                            <Button
+                                to={`/members/register`}
+                                className={`mt-8`}
+                                variant={`dark`}
+                            >Become a member today</Button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className={`py-24 bg-neutral-700`}>
+                <div className={`container mx-auto`}>
+                    <h2 className={`text-6xl font-serif font-bold text-neutral-50 text-center`}>We take care of the hard parts</h2>
+                    <div className={`mt-16 grid grid-cols-3 gap-8`}>
+                        <div>
+                            <div className={`aspect-video overflow-hidden rounded-xl shadow`}>
+                                <Image
+                                    src={`/pexels-kampus-5940846.jpg`}
+                                    width={1600}
+                                    height={900}
+                                    alt={`main-splash`}
+                                    className={`h-full w-full object-cover`}
+                                />
+                            </div>
+                            <div className={`px-4`}>
+                                <h3 className={`mt-4 text-3xl font-bold text-neutral-50 text-center`}>High-Quality Training</h3>
+                                <p className={`mt-2 text-neutral-50 text-center`}>Benefit from our 700-hour program covering essential areas and supervised practice to ensure you provide the best care.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div className={`aspect-video overflow-hidden rounded-xl shadow`}>
+                                <Image
+                                    src={`/pexels-leeloothefirst-8962476.jpg`}
+                                    width={1600}
+                                    height={900}
+                                    alt={`main-splash`}
+                                    className={`h-full w-full object-cover`}
+                                />
+                            </div>
+                            <div className={`px-4`}>
+                                <h3 className={`mt-4 text-3xl font-bold text-neutral-50 text-center`}>Comprehensive Business Admin Support</h3>
+                                <p className={`mt-2 text-neutral-50 text-center`}>We handle your accounting, paperwork, legal matters, and set up essential tech tools like a website and booking software, allowing you to focus on your practice.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div className={`aspect-video overflow-hidden rounded-xl shadow`}>
+                                <Image
+                                    src={`/pexels-kampus-8441870.jpg`}
+                                    width={1600}
+                                    height={900}
+                                    alt={`main-splash`}
+                                    className={`h-full w-full object-cover`}
+                                />
+                            </div>
+                            <div className={`px-4`}>
+                                <h3 className={`mt-4 text-3xl font-bold text-neutral-50 text-center`}>Insurance Recognition</h3>
+                                <p className={`mt-2 text-neutral-50 text-center`}>Enhance your professional credibility with our numbered receipts, recognized by insurance companies, ensuring your clients can get reimbursed for their treatments, building trust and reliability.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={`mt-16 w-full flex justify-center items-center`}>
+                        <Button
+                            to={`/members/register`}
+                            variant={`light`}
+                        >Become a member today</Button>
+                    </div>
+                </div>
+            </div>
+            <div className={`py-24 bg-neutral-50`}>
+                <div className={`container mx-auto`}>
+                    <h2 className={`text-6xl font-serif font-bold text-center`}>We've helped</h2>
+                    <p className={`mt-2 text-center`}>Our members have successfully established and grown their practices with our support, overcoming challenges and gaining recognition.</p>
+                    <div className={`mt-8 max-w-screen-sm mx-auto overflow-hidden rounded-2xl bg-neutral-200 p-8`}>
+                        <p className={`text-center text-xl font-medium`}>"The Canadian Tui Na Association provided me with the support and recognition I needed to grow my business. Their resources are invaluable!"</p>
+                    </div>
+                    <p className={`mt-4 text-center text-xl font-bold`}>Jane Doe, Certified Therapist</p>
+                    <div className={`mt-4 flex gap-8 justify-center items-center`}>
+                        <Image
+                            src={`/logo-intact.svg`}
+                            width={160}
+                            height={160}
+                            alt={`logo-insurance`}
+                            className={`h-32 w-auto object-cover`}
+                        />
+                        <Image
+                            src={`/logo-beneva.svg`}
+                            width={160}
+                            height={160}
+                            alt={`logo-insurance`}
+                            className={`h-16 w-auto object-cover`}
+                        />
+                        <Image
+                            src={`/logo-canada-life.svg`}
+                            width={160}
+                            height={160}
+                            alt={`logo-insurance`}
+                            className={`h-12 w-auto object-cover`}
+                        />
+                        <Image
+                            src={`/logo-manulife.svg`}
+                            width={160}
+                            height={160}
+                            alt={`logo-insurance`}
+                            className={`h-8 w-auto object-cover`}
+                        />
+                        <Image
+                            src={`/logo-sunlife.svg`}
+                            width={160}
+                            height={160}
+                            alt={`logo-insurance`}
+                            className={`h-32 w-auto object-cover`}
+                        />
+                    </div>
+                    <div className={`mt-4 w-full flex justify-center items-center`}>
+                        <Button
+                            to={`/members/register`}
+                            variant={`dark`}
+                        >Become a member today</Button>
+                    </div>
+                </div>
+            </div>
+            <div className={`py-24 bg-neutral-900`}>
+                <div className={`container mx-auto`}>
+                    <h2 className={`text-6xl font-serif font-bold text-center text-neutral-50`}>Choose the Membership That Fits Your Needs</h2>
+                    <div className={`mt-12`}>
+                        <div className={`grid grid-cols-3 gap-4`}>
+                            <div className={`overflow-hidden rounded-2xl bg-neutral-50 p-8 text-center`}>
+                                <h3 className={`mt-4 text-2xl font-bold`}>Small</h3>
+                                <div className={`mt-4 text-base`}>Starting at</div>
+                                <div className={`font-bold text-3xl`}>$2,000/year</div>
+                                <ul className={`mt-4 list-disc list-outside flex flex-col gap-2 ps-4 text-left`}>
+                                    <li><b>Membership Enrollment:</b> Join our professional network.</li>
+                                    <li><b>Insurance Recognition:</b> Your membership details are accessible to insurance companies for client reimbursement.</li>
+                                    <li><b>Professional Community:</b> Connect with other Tui Na therapists.</li>
+                                </ul>
+                            </div>
+                            <div className={`overflow-hidden rounded-2xl bg-primary-100 p-8 text-center`}>
+                                <h3 className={`mt-4 text-2xl font-bold`}>Medium</h3>
+                                <div className={`mt-4 text-base`}>Starting at</div>
+                                <div className={`font-bold text-3xl`}>$10,000/year</div>
+                                <ul className={`mt-4 list-disc list-outside flex flex-col gap-2 ps-4 text-left`}>
+                                    <li><b>Includes Everything from Basic:</b> Enjoy all the benefits of Basic Membership.</li>
+                                    <li><b>Full Admin Support:</b> We handle accounting, paperwork, and legal matters.</li>
+                                    <li><b>Technology Package:</b> Get a professional website, booking software, and tech support.</li>
+                                </ul>
+                            </div>
+                            <div className={`overflow-hidden rounded-2xl bg-neutral-50 p-8 text-center`}>
+                                <h3 className={`mt-4 text-2xl font-bold`}>Large</h3>
+                                <div className={`mt-4 text-base`}>Starting at</div>
+                                <div className={`font-bold text-3xl`}>$20,000/year</div>
+                                <ul className={`mt-4 list-disc list-outside flex flex-col gap-2 ps-4 text-left`}>
+                                    <li><b>Includes Everything from Premium:</b> Access all Premium Membership benefits.</li>
+                                    <li><b>Personalized Mentorship:</b> Receive one-on-one coaching and business strategy sessions.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={`mt-12 w-full flex justify-center items-center`}>
+                        <Button
+                            to={`/members/register`}
+                            variant={`light`}
+                        >Become a member today</Button>
+                    </div>
+                </div>
+            </div>
+            <div className={`py-24 bg-neutral-50`}>
+                <div className={`container mx-auto`}>
+                    <h2 className={`text-6xl font-serif font-bold text-center`}>How it works</h2>
+                    <div className={`mt-12 flex flex-col gap-12 justify-center items-start max-w-screen-sm mx-auto`}>
+                        <div>
+                            <h3 className={`text-3xl font-bold`}>1. Sign Up</h3>
+                            <p className={`text-xl`}>Fill out the membership form.</p>
+                        </div>
+                        <div>
+                            <h3 className={`text-3xl font-bold`}>2. Get Matched</h3>
+                            <p className={`text-xl`}>We'll contact you to understand your needs and recommend a plan.</p>
+                        </div>
+                        <div>
+                            <h3 className={`text-3xl font-bold`}>3. Start Growing</h3>
+                            <p className={`text-xl`}>Access our resources, support, and training to build your successful practice.</p>
+                        </div>
+                    </div>
+                    <div className={`mt-12 w-full flex justify-center items-center`}>
+                        <Button
+                            to={`/members/register`}
+                            variant={`dark`}
+                        >Become a member today</Button>
+                    </div>
+                </div>
+            </div>
+            <div className={`py-24 bg-neutral-100`}>
+                <div className={`container mx-auto grid grid-cols-2 gap-8`}>
+                    <div className={`flex justify-center items-center`}>
+                        <div className={`container`}>
+                            <h2 className={`text-5xl font-serif font-bold`}>Our Objective</h2>
+                            <p className={`mt-8`}>Tui Na is a Chinese therapeutic massage that has been a vital component of Traditional Chinese Medicine (TCM) for millennia, alongside acupuncture and herbal medicine. Practiced in virtually all hospitals in China, Tui Na offers a satisfying relief by applying firm pressures along energy meridians using various finger, palm, and elbow movements. This technique not only alleviates blockages causing pain but also rebalances the body's energy.</p>
+                            <p className={`mt-8`}>At the Canadian Tui Na Association, we are committed to supporting massage therapists in overcoming their professional challenges. With our comprehensive training, administrative support, and recognized certification, you can confidently grow your practice. Join us today and become part of a network dedicated to excellence and professional growth.</p>
+                            <Button
+                                to={`/members/register`}
+                                className={`mt-8`}
+                                variant={`dark`}
+                            >Become a member today</Button>
+                        </div>
+                    </div>
+                    <div className={`aspect-square overflow-hidden rounded-2xl shadow`}>
+                        <Image
+                            src={`/amy-hirschi-K0c8ko3e6AA-unsplash.jpg`}
+                            width={1600}
+                            height={900}
+                            alt={`main-splash`}
+                            className={`h-full w-full object-cover`}
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    )
 }

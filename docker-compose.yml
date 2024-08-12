@@ -1,0 +1,47 @@
+services:
+  database:
+    image: mariadb:10.5.25
+    container_name: mariadb
+    networks:
+      - backend
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: main
+      MYSQL_USER: prisma
+      MYSQL_PASSWORD: prismapassword
+    volumes:
+      - database_data:/var/lib/mysql
+  redis:
+    image: redis:latest
+    container_name: redis
+    networks:
+      - backend
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+  app:
+    image: node:20.16.0
+    container_name: nextjs
+    networks:
+      - backend
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: "mysql://root:rootpassword@database:3306/main"
+    working_dir: /app
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: sh -c "npm install && npm run dev"
+    depends_on:
+      - database
+      - redis
+
+volumes:
+  database_data:
+  redis_data:
+networks:
+  backend:
