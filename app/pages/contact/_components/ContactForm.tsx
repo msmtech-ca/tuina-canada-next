@@ -8,6 +8,7 @@ import { caseSchema } from '@/src/validation'
 import clsx from 'clsx'
 import Input from '@/app/_components/Input'
 import TextArea from '@/app/_components/TextArea'
+import FormSuccessMessage from '@/app/members/_components/FormSuccessMessage'
 
 const initialState = caseSchema._output
 
@@ -16,10 +17,7 @@ export default function ContactForm() {
     const [state, formAction] = useFormState(handleContactFormSubmit, initialState)
 
     return state?.result?.success === true ? (
-        <div className={`h-full flex flex-col gap-4 items-center justify-center text-center`}>
-            <h2 className={`mt-8 font-serif text-3xl leading-none font-bold`}>Thank you.</h2>
-            <p className={`mt-4`}>We will get back to you very soon.</p>
-        </div>
+        <FormSuccessMessage />
     ) : (
         <form
             action={formAction}
@@ -63,8 +61,8 @@ export default function ContactForm() {
                 </div>
                 <div>
                     <TextArea
-                        labelName={`Subject`}
-                        name={`subject`}
+                        labelName={`Message`}
+                        name={`message`}
                         rows={4}
                         error={state?.errors?.message}
                         required

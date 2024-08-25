@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import { HTMLInputTypeAttribute, useId } from "react"
+import { HTMLAttributes, HTMLInputTypeAttribute, SelectHTMLAttributes, useId } from "react"
 
 interface SelectProps {
     name: string;
@@ -11,9 +11,11 @@ interface SelectProps {
         label: string;
         value: string;
     }>;
+    value?: SelectHTMLAttributes<HTMLSelectElement>['value'];
+    defaultValue?: HTMLAttributes<HTMLSelectElement>['defaultValue']
 }
 
-export default function Select({ name, labelName, error, required=false, disabled=false, options }: SelectProps) {
+export default function Select({ name, labelName, error, required=false, disabled=false, options, value, defaultValue }: SelectProps) {
     const id = useId()
     return (
         <div className={`py-1 h-full w-full flex items-end`}>
@@ -36,6 +38,8 @@ export default function Select({ name, labelName, error, required=false, disable
                     name={name}
                     required={required}
                     disabled={disabled}
+                    value={value}
+                    defaultValue={defaultValue}
                 >
                     {options.map((option, optionIndex, optionArray) => (
                         <option key={`${id}-optionIndex-${optionIndex}`} value={option.value}>{option.label}</option>

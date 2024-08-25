@@ -1,25 +1,52 @@
-import Button from "@/app/_components/Button"
-import DataTable from "@/app/members/_components/DataTable"
+import { handleEditUserSubmit } from "@/app/actions"
+import DeleteUserButton from "@/app/members/_components/DeleteUserButton"
+import UsersForm from "@/app/members/_components/UsersForm"
 import prisma from "@/src/database"
-import { User } from "@prisma/client"
+import { toInputDate } from "@/src/lib/utils"
 import Link from "next/link"
 
 export default async function Page({ params }: { params: { id: string } }) {
 
-    const user = await prisma.user.findFirst({
+    const userData = await prisma.user.findFirst({
         where: {
             id: params.id,
+        },
+        include: {
+            planSubscription: true,
         }
     })
 
-    if (!user) {
+    if (!userData) {
         throw new Error('User not found!')
     }
+
+    const plans = await prisma.plan.findMany({
+        where: {
+            deleted: false,
+        }
+    })
+
 
     return (
         <div>
             <Link href={`/members/home/admin/users`} className={`mb-4`}>Go back</Link>
-            <h1 className={`font-serif text-4xl leading-none font-bold`}>{`member: ${params.id}, ${user?.firstName}`}</h1>
+            <div className={`flex justify-between items-center`}>
+                <h1 className={`font-serif text-4xl leading-none font-bold`}>{`Member Information`}</h1>
+                <DeleteUserButton resourceId={params.id} />
+            </div>
+            <div className={`mt-4`}>
+                <UsersForm
+                    initialState={{
+                        ...userData,
+                        resourceId: userData.id,
+                        dateOfBirth: toInputDate(userData.dateOfBirth),
+                        plan: userData.planSubscription?.planId || '',
+                    }}
+                    action={handleEditUserSubmit}
+                    plans={plans}
+                    submitText={`Save changes`}
+                />
+            </div>
         </div>
     )
 }

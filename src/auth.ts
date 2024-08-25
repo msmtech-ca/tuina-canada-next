@@ -68,7 +68,7 @@ const authManager = {
             accessToken: null,
             user: user,
         }
-        await sessionManager.set('auth', JSON.stringify(auth))
+        await sessionManager.set('auth', JSON.stringify(auth), 3600)
         return true
     },
     logout: async () => {

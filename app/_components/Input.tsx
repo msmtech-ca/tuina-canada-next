@@ -12,9 +12,10 @@ interface InputProps {
     minLength?: number;
     maxLength?: number;
     value?: InputHTMLAttributes<HTMLInputElement>['value'];
+    defaultValue?: InputHTMLAttributes<HTMLInputElement>['defaultValue'];
 }
 
-export default function Input({ name, labelName, type='text', error, required=false, readonly=false, disabled=false, minLength, maxLength, value }: InputProps) {
+export default function Input({ name, labelName, type='text', error, required=false, readonly=false, disabled=false, minLength, maxLength, value, defaultValue }: InputProps) {
     const id = useId()
     return (
         <div className={`py-1 h-full w-full flex items-end`}>
@@ -42,6 +43,7 @@ export default function Input({ name, labelName, type='text', error, required=fa
                     minLength={minLength}
                     maxLength={maxLength}
                     value={value}
+                    defaultValue={defaultValue}
                 />
             </div>
         </div>

@@ -5,10 +5,18 @@ import { encrypt, decrypt } from "./lib/utils";
 
 type SessionId = string;
 const sessionManager = {
-    getSessionId: (): SessionId | undefined => {
+    getSessionId: (): SessionId | null => {
         const cookieStore = cookies();
         const encryptedSessionId = cookieStore.get("x0_sessionId")?.value;
-        return encryptedSessionId ? decrypt(encryptedSessionId) : encryptedSessionId;
+        if (!encryptedSessionId) {
+            return null
+        }
+        try {
+            const sessionId = decrypt(encryptedSessionId)
+            return sessionId
+        } catch (error) {
+            return null
+        }
     },
     setSessionId: (sessionId: SessionId): void => {
         const cookieStore = cookies();

@@ -43,8 +43,8 @@ model Registration {
 }
 
 enum CaseStatus {
-    UNREAD
-    READ
+    NEW
+    ANSWERED
 }
 
 model Case {
@@ -55,7 +55,7 @@ model Case {
     phone                               String
     subject                             String
     message                             String
-    status                              CaseStatus              @default(UNREAD)
+    status                              CaseStatus              @default(NEW)
 
     deleted                             Boolean                 @default(false)
     updatedAt                           DateTime                @updatedAt @default(now())
@@ -135,11 +135,6 @@ model Plan {
     createdAt                           DateTime                @default(now())
 }
 
-enum PlanSubscriptionStatus {
-    ACTIVE
-    INACTIVE
-}
-
 model PlanSubscription {
     id                                  String                  @id @default(uuid())
     startDate                           DateTime
@@ -147,9 +142,9 @@ model PlanSubscription {
     externalId                          String?
     active                              Boolean                 @default(false)
 
-    user                                User                    @relation(fields: [userId], references: [id])
+    user                                User                    @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
     userId                              String                  @unique
-    plan                                Plan                    @relation(fields: [planId], references: [id])
+    plan                                Plan                    @relation(fields: [planId], references: [id], onDelete: Restrict, onUpdate: Cascade)
     planId                              String
 
     deleted                             Boolean                 @default(false)

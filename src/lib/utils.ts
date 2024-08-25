@@ -24,3 +24,7 @@ export function decrypt(text: string) {
     decrypted = Buffer.concat([decrypted, decipher.final()]);
     return decrypted.toString();
 }
+
+export function toInputDate(date: Date) {
+    return date.toISOString().split('T')[0]
+}

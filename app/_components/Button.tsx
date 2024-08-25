@@ -1,3 +1,5 @@
+'use client'
+
 import { spinnerIcon } from "@/src/lib/icons";
 import clsx from "clsx";
 import Link from "next/link";

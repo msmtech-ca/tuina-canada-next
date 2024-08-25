@@ -1,18 +1,9 @@
 'use client'
-import { toastTest } from "@/app/actions";
 import { ReactNode, useActionState, useEffect } from "react";
 import { useFormState } from "react-dom";
 import { Toaster } from "react-hot-toast";
 
 export default function ToastProvider({ children }: { children: ReactNode }) {
-
-    const [state, formAction] = useFormState(toastTest, { success: false })
-
-    useEffect(() => {
-        if (state.success) {
-            console.log('ToastProvider Success!!!')
-        }
-    })
 
     return (
         <>
