@@ -1,0 +1,41 @@
+{
+    "main_splash_alt": "Image principale",
+    "our_advantages": "Nos Avantages",
+    "advantage1": {
+        "title": "1. Organisation à but non lucratif",
+        "description": "En tant qu'organisation à but non lucratif, nos membres sont exonérés d'impôts, ce qui entraîne des économies substantielles."
+    },
+    "advantage2": {
+        "title": "2. Reconnaissance des Assurances",
+        "description": "L'Association de Tui Na du Canada (A.T.C.) est reconnue par les compagnies d'assurance, garantissant que vos clients reçoivent les remboursements qu'ils méritent."
+    },
+    "advantage3": {
+        "title": "3. Carte de Membre",
+        "description": "À l'adhésion, vous recevrez une carte de membre pour une identification facile et un accès aux avantages."
+    },
+    "advantage4": {
+        "title": "4. Assurance Responsabilité Professionnelle",
+        "description": "Les membres ont accès à une assurance responsabilité professionnelle abordable, offrant tranquillité d'esprit et protection."
+    },
+    "advantage5": {
+        "title": "5. Orientation de Carrière",
+        "description": "Nous offrons des services d'orientation pour les membres souhaitant poursuivre une formation supplémentaire et un développement professionnel."
+    },
+    "advantage6": {
+        "title": "6. Traitement Rapide",
+        "description": "Nous traitons les demandes dans les 48 heures suivant la réception, permettant aux nouveaux membres de commencer à pratiquer rapidement."
+    },
+    "advantage7": {
+        "title": "7. Site Web Dynamique",
+        "description": "Notre site web régulièrement mis à jour (tuinaducanada.com) offre un accès aux membres et aux compagnies d'assurance pour des fins de vérification."
+    },
+    "advantage8": {
+        "title": "8. Réduction pour Parrainage",
+        "description": "Recevez une réduction de 50 $ pour chaque parrainage, applicable à votre prochain renouvellement d'adhésion ou à l'achat de produits (gels, papier d'examen ou reçus)."
+    },
+    "advantage9": {
+        "title": "9. Options de Paiement Flexibles",
+        "description": "Les frais d'adhésion peuvent être payés en ligne, par chèque ou en espèces à notre bureau, offrant des méthodes de paiement pratiques."
+    },
+    "become_member_today": "Devenez membre dès aujourd'hui"
+}

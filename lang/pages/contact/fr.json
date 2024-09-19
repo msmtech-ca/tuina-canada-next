@@ -1,0 +1,63 @@
+{
+    "contact": "Contact",
+    "office_address": "Adresse du bureau",
+    "association_name": "Association de Tui Na du Canada",
+    "address_line1": "123 Rue du Bien-être",
+    "address_line2": "Toronto, ON, M1A 2B3",
+    "country": "Canada",
+    "office_hours": "Heures de bureau",
+    "hours_weekdays": "Lundi au vendredi : 9h00 - 17h00",
+    "hours_saturday": "Samedi : 10h00 - 15h00",
+    "hours_sunday": "Dimanche : Fermé",
+    "phone": "Téléphone",
+    "phone_number": "+1 (123) 456-7890",
+    "email": "Courriel",
+    "email_address": "info@tuinaducanada.com",
+    "sections": {
+        "ContactForm": {
+            "form": {
+                "name": {
+                    "label": "Nom",
+                    "errors": {
+                        "invalid_type": "Le nom est invalide.",
+                        "empty": "Le nom ne peut pas être vide."
+                    }
+                },
+                "email": {
+                    "label": "Courriel",
+                    "errors": {
+                        "invalid_type": "Le courriel est invalide.",
+                        "empty": "Le courriel ne peut pas être vide.",
+                        "invalid": "Veuillez entrer une adresse courriel valide."
+                    }
+                },
+                "phone": {
+                    "label": "Téléphone",
+                    "errors": {
+                        "invalid_type": "Le téléphone est invalide.",
+                        "empty": "Le téléphone ne peut pas être vide."
+                    }
+                },
+                "subject": {
+                    "label": "Sujet",
+                    "errors": {
+                        "invalid_type": "Le sujet est invalide.",
+                        "empty": "Le sujet ne peut pas être vide."
+                    }
+                },
+                "message": {
+                    "label": "Message",
+                    "errors": {
+                        "invalid_type": "Le message est invalide.",
+                        "empty": "Le message ne peut pas être vide."
+                    }
+                },
+                "send_message": "Envoyer le message"
+            },
+            "form_success": {
+                "title": "Merci.",
+                "message": "Nous vous répondrons très bientôt."
+            }
+        }
+    }
+}

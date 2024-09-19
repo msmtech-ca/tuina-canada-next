@@ -7,6 +7,7 @@ import { sendTransactionalEmail } from "@/src/smtp"
 import { addUserSchema, caseSchema, changeCaseStatusSchema, changeRegistrationStatusSchema, deleteResourceSchema, loginInitiateSchema, registrationSchema } from "@/src/validation"
 import { render } from '@react-email/components'
 import { redirect } from "next/navigation"
+import { unhookedTranslation } from "./_components/i18n"
 
 export async function handleContactFormSubmit(prevState: any, formData: FormData) {
 
@@ -25,15 +26,27 @@ export async function handleContactFormSubmit(prevState: any, formData: FormData
     // Return early if the form data is invalid
     if (!validatedFields.success) {
 
+        const errors = validatedFields.error.flatten().fieldErrors
+        const lng = formData.get('lng') as string || 'en'
+        const { t } = await unhookedTranslation(lng, 'pages/contact')
+
+        const translatedErrors = errors;
+        for (const [field, fieldErrors] of Object.entries(errors)) {
+            if (fieldErrors) {
+                translatedErrors[field as keyof typeof errors] = fieldErrors.map((errorKey) => t(`sections.ContactForm.${errorKey}`));
+            }
+        }
+
         const response = {
             result: null,
-            errors: validatedFields.error.flatten().fieldErrors,
+            errors: translatedErrors,
         }
 
         console.info('handleContactFormSubmit action form is invalid', {
             formData: formData,
             result: response.result,
             errors: response.errors,
+            translatedErrors: translatedErrors,
         })
 
         return response

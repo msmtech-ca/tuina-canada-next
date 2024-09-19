@@ -1,0 +1,24 @@
+{
+    "insurance": "Assurance",
+    "verify_membership_status": "Vérifier le statut d'adhésion",
+    "paragraph1": "Si vous travaillez avec une compagnie d'assurance, vous pouvez facilement vérifier si un membre est actif en effectuant une recherche ci-dessous en utilisant son numéro d'adhésion.",
+    "iframe_title": "Outil de vérification des membres",
+    "benefits_of_insurance_recognition": "Avantages de la reconnaissance par les assurances",
+    "for_members": "Pour les membres :",
+    "benefits_for_members": [
+        "Remboursement des clients : Nos membres sont reconnus par les compagnies d'assurance, garantissant que les clients reçoivent un remboursement total ou partiel de leurs traitements.",
+        "Crédibilité : Faire partie d'une association reconnue par les compagnies d'assurance renforce votre crédibilité professionnelle."
+    ],
+    "for_insurance_companies": "Pour les compagnies d'assurance :",
+    "benefits_for_insurance_companies": [
+        "Vérification : Vérifiez facilement le statut actif d'un thérapeute Tui Na via notre portail en ligne.",
+        "Réseau de confiance : Assurez-vous que vos clients reçoivent des traitements de thérapeutes qualifiés et vérifiés."
+    ],
+    "how_to_use_verification_tool": "Comment utiliser l'outil de vérification",
+    "how_to_use_list": [
+        "Entrez le numéro d'adhésion : Saisissez le numéro d'adhésion fourni par le thérapeute.",
+        "Recherche : Cliquez sur le bouton de recherche pour vérifier le statut actif du membre.",
+        "Voir les résultats : Le système affichera le statut du membre, s'assurant qu'il est qualifié et reconnu."
+    ],
+    "become_member_today": "Devenez membre dès aujourd'hui"
+}

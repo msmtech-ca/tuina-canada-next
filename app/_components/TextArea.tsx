@@ -25,6 +25,9 @@ export default function TextArea({ name, labelName, rows, error, required=false,
                         <span className={`text-red-600`}>*</span>
                     )}
                 </label>
+                {error && (
+                    <div className={`text-red-500 peer text-sm`}>{Array.isArray(error) ? error?.join(' | ') : error}</div>
+                )}
                 <textarea
                     className={clsx([`w-full bg-transparent rounded-md border px-2 py-2 shadow-sm text-base mt-1`, error ? `border-red-500` : `border-neutral-500`])}
                     id={id}

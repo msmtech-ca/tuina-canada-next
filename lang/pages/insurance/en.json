@@ -1,0 +1,24 @@
+{
+    "insurance": "Insurance",
+    "verify_membership_status": "Verify Membership Status",
+    "paragraph1": "If you work with an insurance company, you can easily verify if a member is active by searching below using their membership number.",
+    "iframe_title": "Member Verification Tool",
+    "benefits_of_insurance_recognition": "Benefits of Insurance Recognition",
+    "for_members": "For Members:",
+    "benefits_for_members": [
+        "Client Reimbursement: Our members are recognized by insurance companies, ensuring clients receive full or partial reimbursement for their treatments.",
+        "Credibility: Being part of an association recognized by insurance companies boosts your professional credibility."
+    ],
+    "for_insurance_companies": "For Insurance Companies:",
+    "benefits_for_insurance_companies": [
+        "Verification: Easily verify the active status of a Tui Na therapist through our online portal.",
+        "Trustworthy Network: Ensure your clients receive treatments from qualified and verified therapists."
+    ],
+    "how_to_use_verification_tool": "How to Use the Verification Tool",
+    "how_to_use_list": [
+        "Enter Membership Number: Input the membership number provided by the therapist.",
+        "Search: Click the search button to verify the member's active status.",
+        "View Results: The system will display the member's status, ensuring they are qualified and recognized."
+    ],
+    "become_member_today": "Become a member today"
+}

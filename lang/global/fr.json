@@ -1,0 +1,19 @@
+{
+    "association_name": "Association de Tui Na du Canada",
+    "navigation": {
+        "objective": "Objectif",
+        "training": "Formation",
+        "advantages": "Avantages",
+        "insurance": "Assurance",
+        "contact": "Contact",
+        "members": "Membres"
+    },
+    "mission_statement": "Notre mission est de donner aux massothérapeutes comme vous les moyens d'établir une entreprise prospère.",
+    "navigation_title": "Navigation",
+    "footer": {
+        "privacy_policy": "Politique de confidentialité",
+        "terms_conditions": "Conditions générales",
+        "copy": "© 2024 Association canadienne de Tui Na. ",
+        "web_solution": "Solution web par MSM TECHNOLOGIES"
+    }
+}

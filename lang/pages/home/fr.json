@@ -1,0 +1,59 @@
+{
+    "main_splash_alt": "Image principale",
+    "empowering_members": "Donner aux membres les moyens d'établir et de développer leur pratique",
+    "provide_resources": "Nous fournissons les ressources, la certification et le soutien dont vous avez besoin pour établir et développer des entreprises prospères.",
+    "become_member_today": "Devenez membre dès aujourd'hui",
+    "gain_credibility": "Gagnez en crédibilité avec la certification",
+    "receive_support": "Recevez un soutien commercial complet",
+    "ensure_reimbursement": "Assurez le remboursement des clients avec la reconnaissance des assurances",
+    "running_clinic_hard": "Diriger une clinique de massage est déjà assez difficile",
+    "clinic_challenges": [
+        "Il est difficile d'être reconnu par les compagnies d'assurance.",
+        "Gérer les tâches administratives comme la comptabilité, la paperasse, les problèmes juridiques et la configuration technique est accablant.",
+        "Se démarquer et prouver sa crédibilité parmi de nombreux praticiens est un défi."
+    ],
+    "we_take_care": "Nous nous occupons des parties difficiles",
+    "benefits": [
+        {
+            "image": "/pexels-kampus-5940846.jpg",
+            "title": "Formation de haute qualité",
+            "description": "Bénéficiez de notre programme de 700 heures couvrant les domaines essentiels et une pratique supervisée pour vous assurer de fournir les meilleurs soins."
+        },
+        {
+            "image": "/pexels-leeloothefirst-8962476.jpg",
+            "title": "Soutien administratif complet",
+            "description": "Nous gérons votre comptabilité, votre paperasse, vos affaires juridiques et mettons en place des outils technologiques essentiels comme un site web et un logiciel de réservation, vous permettant de vous concentrer sur votre pratique."
+        },
+        {
+            "image": "/pexels-kampus-8441870.jpg",
+            "title": "Reconnaissance par les assurances",
+            "description": "Améliorez votre crédibilité professionnelle avec nos reçus numérotés, reconnus par les compagnies d'assurance, garantissant que vos clients peuvent être remboursés pour leurs traitements, renforçant ainsi la confiance et la fiabilité."
+        }
+    ],
+    "weve_helped": "Nous avons aidé",
+    "members_success": "Nos membres ont réussi à établir et à développer leurs pratiques avec notre soutien, surmontant les défis et gagnant en reconnaissance.",
+    "testimonial": {
+        "quote": "\"L'Association Canadienne de Tui Na m'a fourni le soutien et la reconnaissance dont j'avais besoin pour développer mon entreprise. Leurs ressources sont inestimables !\"",
+        "author": "Jane Doe, Thérapeute Certifiée"
+    },
+    "how_it_works": "Comment ça fonctionne",
+    "steps": [
+        {
+            "title": "1. Inscrivez-vous",
+            "description": "Remplissez le formulaire d'adhésion."
+        },
+        {
+            "title": "2. Obtenez une correspondance",
+            "description": "Nous vous contacterons pour comprendre vos besoins et vous recommander un plan."
+        },
+        {
+            "title": "3. Commencez à grandir",
+            "description": "Accédez à nos ressources, notre soutien et notre formation pour construire votre pratique réussie."
+        }
+    ],
+    "our_objective": "Notre Objectif",
+    "paragraphs": [
+        "Le Tui Na est un massage thérapeutique chinois qui est un composant vital de la Médecine Traditionnelle Chinoise (MTC) depuis des millénaires, aux côtés de l'acupuncture et de la phytothérapie. Pratiqué dans presque tous les hôpitaux en Chine, le Tui Na offre un soulagement satisfaisant en appliquant des pressions fermes le long des méridiens énergétiques en utilisant divers mouvements des doigts, de la paume et du coude. Cette technique non seulement atténue les blocages causant de la douleur mais rééquilibre également l'énergie du corps.",
+        "À l'Association Canadienne de Tui Na, nous nous engageons à soutenir les massothérapeutes dans la surmonte de leurs défis professionnels. Avec notre formation complète, notre soutien administratif et notre certification reconnue, vous pouvez développer votre pratique en toute confiance. Rejoignez-nous dès aujourd'hui et faites partie d'un réseau dédié à l'excellence et à la croissance professionnelle."
+    ]
+}

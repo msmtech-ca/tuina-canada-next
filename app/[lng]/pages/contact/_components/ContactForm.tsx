@@ -8,24 +8,31 @@ import { caseSchema } from '@/src/validation'
 import clsx from 'clsx'
 import Input from '@/app/_components/Input'
 import TextArea from '@/app/_components/TextArea'
-import FormSuccessMessage from '@/app/members/_components/FormSuccessMessage'
+import FormSuccessMessage from '@/app/[lng]/members/_components/FormSuccessMessage'
+import { TFunction } from 'i18next'
 
 const initialState = caseSchema._output
 
-export default function ContactForm() {
+interface ContactFormProps {
+    lng: string;
+    t: { [key:string]: any }
+}
+
+export default function ContactForm({ lng, t }: ContactFormProps) {
 
     const [state, formAction] = useFormState(handleContactFormSubmit, initialState)
 
+    const translations = t.ContactForm
+
     return state?.result?.success === true ? (
-        <FormSuccessMessage />
+        <FormSuccessMessage t={t} />
     ) : (
-        <form
-            action={formAction}
-        >
+        <form action={formAction}>
+            <input name={`lng`} hidden value={lng} readOnly />
             <div className={`flex flex-col gap-4`}>
                 <div>
                     <Input
-                        labelName={`Name`}
+                        labelName={translations.form.name.label}
                         name={`name`}
                         error={state?.errors?.name}
                         type={`text`}
@@ -34,7 +41,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                     <Input
-                        labelName={`Email`}
+                        labelName={translations.form.email.label}
                         name={`email`}
                         error={state?.errors?.email}
                         type={`email`}
@@ -43,7 +50,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                     <Input
-                        labelName={`Phone`}
+                        labelName={translations.form.phone.label}
                         name={`phone`}
                         error={state?.errors?.phone}
                         type={`tel`}
@@ -52,7 +59,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                     <Input
-                        labelName={`Subject`}
+                        labelName={translations.form.subject.label}
                         name={`subject`}
                         error={state?.errors?.subject}
                         type={`text`}
@@ -61,7 +68,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                     <TextArea
-                        labelName={`Message`}
+                        labelName={translations.form.message.label}
                         name={`message`}
                         rows={4}
                         error={state?.errors?.message}
@@ -69,12 +76,12 @@ export default function ContactForm() {
                     />
                 </div>
             </div>
-            <SendButton />
+            <SendButton sendMessageText={translations.form.send_message} />
         </form>
     )
 }
 
-function SendButton() {
+function SendButton({ sendMessageText }: { sendMessageText: string }) {
 
     const { pending } = useFormStatus()
 
@@ -83,6 +90,8 @@ function SendButton() {
             className={`mt-4`}
             variant={`dark`}
             loading={pending}
-        >Send message</Button>
+        >
+            {sendMessageText}
+        </Button>
     )
 }

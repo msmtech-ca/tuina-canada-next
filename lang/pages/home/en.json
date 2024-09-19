@@ -1,0 +1,59 @@
+{
+    "main_splash_alt": "Main Splash Image",
+    "empowering_members": "Empowering Members to Establish and Grow",
+    "provide_resources": "We provide the resources, certification, and support you need to establish and grow successful businesses.",
+    "become_member_today": "Become a member today",
+    "gain_credibility": "Gain Credibility with Certification",
+    "receive_support": "Receive Comprehensive Business Support",
+    "ensure_reimbursement": "Ensure Client Reimbursement with Insurance Recognition",
+    "running_clinic_hard": "Running a massage clinic is hard enough",
+    "clinic_challenges": [
+        "It's challenging to be acknowledged by insurance companies.",
+        "Handling administrative tasks like accounting, paperwork, legal issues, and tech setup is overwhelming.",
+        "Standing out and proving credibility among numerous practitioners is tough."
+    ],
+    "we_take_care": "We take care of the hard parts",
+    "benefits": [
+        {
+            "image": "/pexels-kampus-5940846.jpg",
+            "title": "High-Quality Training",
+            "description": "Benefit from our 700-hour program covering essential areas and supervised practice to ensure you provide the best care."
+        },
+        {
+            "image": "/pexels-leeloothefirst-8962476.jpg",
+            "title": "Comprehensive Business Admin Support",
+            "description": "We handle your accounting, paperwork, legal matters, and set up essential tech tools like a website and booking software, allowing you to focus on your practice."
+        },
+        {
+            "image": "/pexels-kampus-8441870.jpg",
+            "title": "Insurance Recognition",
+            "description": "Enhance your professional credibility with our numbered receipts, recognized by insurance companies, ensuring your clients can get reimbursed for their treatments, building trust and reliability."
+        }
+    ],
+    "weve_helped": "We've helped",
+    "members_success": "Our members have successfully established and grown their practices with our support, overcoming challenges and gaining recognition.",
+    "testimonial": {
+        "quote": "\"The Canadian Tui Na Association provided me with the support and recognition I needed to grow my business. Their resources are invaluable!\"",
+        "author": "Jane Doe, Certified Therapist"
+    },
+    "how_it_works": "How it works",
+    "steps": [
+        {
+            "title": "1. Sign Up",
+            "description": "Fill out the membership form."
+        },
+        {
+            "title": "2. Get Matched",
+            "description": "We'll contact you to understand your needs and recommend a plan."
+        },
+        {
+            "title": "3. Start Growing",
+            "description": "Access our resources, support, and training to build your successful practice."
+        }
+    ],
+    "our_objective": "Our Objective",
+    "paragraphs": [
+        "Tui Na is a Chinese therapeutic massage that has been a vital component of Traditional Chinese Medicine (TCM) for millennia, alongside acupuncture and herbal medicine. Practiced in virtually all hospitals in China, Tui Na offers a satisfying relief by applying firm pressures along energy meridians using various finger, palm, and elbow movements. This technique not only alleviates blockages causing pain but also rebalances the body's energy.",
+        "At the Canadian Tui Na Association, we are committed to supporting massage therapists in overcoming their professional challenges. With our comprehensive training, administrative support, and recognized certification, you can confidently grow your practice. Join us today and become part of a network dedicated to excellence and professional growth."
+    ]
+}

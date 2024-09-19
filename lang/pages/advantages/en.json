@@ -1,0 +1,41 @@
+{
+    "main_splash_alt": "Main Splash Image",
+    "our_advantages": "Our Advantages",
+    "advantage1": {
+        "title": "1. Non-Profit Organization",
+        "description": "As a non-profit organization, our members are exempt from taxes, resulting in substantial savings."
+    },
+    "advantage2": {
+        "title": "2. Insurance Recognition",
+        "description": "The Canadian Tui Na Association (A.T.C.) is recognized by insurance companies, ensuring your clients receive the reimbursements they deserve."
+    },
+    "advantage3": {
+        "title": "3. Membership Card",
+        "description": "Upon joining, you will receive a membership card for easy identification and benefits access."
+    },
+    "advantage4": {
+        "title": "4. Professional Liability Insurance",
+        "description": "Members have access to affordable professional liability insurance, providing peace of mind and protection."
+    },
+    "advantage5": {
+        "title": "5. Career Guidance",
+        "description": "We offer orientation services for members wishing to pursue additional training and professional development."
+    },
+    "advantage6": {
+        "title": "6. Quick Processing",
+        "description": "We process applications within 48 hours of receipt, allowing new members to start practicing quickly."
+    },
+    "advantage7": {
+        "title": "7. Dynamic Website",
+        "description": "Our regularly updated website (tuinaducanada.com) provides access for members and insurance companies for verification purposes."
+    },
+    "advantage8": {
+        "title": "8. Referral Discount",
+        "description": "Receive a $50 discount for each referral, applicable to your next membership renewal or the purchase of products (gels, examination paper, or receipts)."
+    },
+    "advantage9": {
+        "title": "9. Flexible Payment Options",
+        "description": "Membership fees can be paid online, by check or cash at our office, offering convenient payment methods."
+    },
+    "become_member_today": "Become a member today"
+}

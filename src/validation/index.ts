@@ -5,30 +5,30 @@ import { z } from 'zod';
 export const caseSchema = z.object({
     name: z
         .string({
-            invalid_type_error: 'Name is invalid.'
+            invalid_type_error: 'form.name.errors.invalid_type',
         })
-        .min(1, 'Name cannot be empty.'),
+        .min(1, 'form.name.errors.empty'),
     email: z
         .string({
-            invalid_type_error: 'Email is invalid.'
+            invalid_type_error: 'form.email.errors.invalid_type',
         })
-        .email()
-        .min(1, 'Email cannot be empty.'),
+        .email('form.email.errors.invalid')
+        .min(1, 'form.email.errors.empty'),
     phone: z
         .string({
-            invalid_type_error: 'Phone is invalid.'
+            invalid_type_error: 'form.phone.errors.invalid_type',
         })
-        .min(1, 'Phone cannot be empty.'),
+        .min(1, 'form.phone.errors.empty'),
     subject: z
         .string({
-            invalid_type_error: 'Subject is invalid.'
+            invalid_type_error: 'form.subject.errors.invalid_type',
         })
-        .min(1, 'Subject cannot be empty.'),
+        .min(1, 'form.subject.errors.empty'),
     message: z
         .string({
-            invalid_type_error: 'Message is invalid.'
+            invalid_type_error: 'form.message.errors.invalid_type',
         })
-        .min(1, 'Message cannot be empty.'),
+        .min(1, 'form.message.errors.empty'),
 });
 
 export const loginInitiateSchema = z.object({

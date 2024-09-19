@@ -1,0 +1,63 @@
+{
+    "contact": "Contact",
+    "office_address": "Office Address",
+    "association_name": "Canadian Tui Na Association",
+    "address_line1": "123 Wellness Street",
+    "address_line2": "Toronto, ON, M1A 2B3",
+    "country": "Canada",
+    "office_hours": "Office Hours",
+    "hours_weekdays": "Monday to Friday: 9:00 AM - 5:00 PM",
+    "hours_saturday": "Saturday: 10:00 AM - 3:00 PM",
+    "hours_sunday": "Sunday: Closed",
+    "phone": "Phone",
+    "phone_number": "+1 (123) 456-7890",
+    "email": "Email",
+    "email_address": "info@tuinaducanada.com",
+    "sections": {
+        "ContactForm": {
+            "form": {
+                "name": {
+                    "label": "Name",
+                    "errors": {
+                        "invalid_type": "Name is invalid.",
+                        "empty": "Name cannot be empty."
+                    }
+                },
+                "email": {
+                    "label": "Email",
+                    "errors": {
+                        "invalid_type": "Email is invalid.",
+                        "empty": "Email cannot be empty.",
+                        "invalid": "Please enter a valid email address."
+                    }
+                },
+                "phone": {
+                    "label": "Phone",
+                    "errors": {
+                        "invalid_type": "Phone is invalid.",
+                        "empty": "Phone cannot be empty."
+                    }
+                },
+                "subject": {
+                    "label": "Subject",
+                    "errors": {
+                        "invalid_type": "Subject is invalid.",
+                        "empty": "Subject cannot be empty."
+                    }
+                },
+                "message": {
+                    "label": "Message",
+                    "errors": {
+                        "invalid_type": "Message is invalid.",
+                        "empty": "Message cannot be empty."
+                    }
+                },
+                "send_message": "Send message"
+            },
+            "form_success": {
+                "title": "Thank you.",
+                "message": "We will get back to you very soon."
+            }
+        }
+    }
+}

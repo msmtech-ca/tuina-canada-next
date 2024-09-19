@@ -1,0 +1,63 @@
+{
+    "main_splash_alt": "Main Splash Image",
+    "training_program": "Training Program",
+    "paragraph1": "The Canadian Tui Na Association offers a comprehensive training program designed to equip therapists with the skills and knowledge necessary to provide high-quality Tui Na therapy. Our program ensures that members are well-prepared to meet the highest standards of professional practice.",
+    "program_overview": "Program Overview",
+    "total_training_hours": "Total Training Hours: 700 Hours",
+    "sections": {
+        "section1": {
+            "title": "1. Introduction to Massage Therapy (125 Hours)",
+            "items": [
+                "Anatomy: Understanding the human body structure.",
+                "Hygiene: Best practices for maintaining a clean and safe environment.",
+                "Pathology: Identifying and understanding common ailments.",
+                "Physiology: Studying body functions and their relevance to therapy."
+            ]
+        },
+        "section2": {
+            "title": "2. Theory and Practice of Massage Therapy (150 Hours)",
+            "items": [
+                "Detailed Therapeutic Massage: In-depth techniques and applications.",
+                "Massage Techniques: Tui Na, Thai, Shiatsu, Swedish massage, and more."
+            ]
+        },
+        "section3": {
+            "title": "3. Tui Na and Medical Treatments (100 Hours)",
+            "items": [
+                "Acupuncture Meridian Concepts: Principles of Yin Yang and Fuzang.",
+                "Foot Reflexology: Techniques and manipulation of foot massage."
+            ]
+        },
+        "section4": {
+            "title": "4. Reflexology (50 Hours)",
+            "items": [
+                "Foot Reflex Zones: Techniques and applications for therapeutic results."
+            ]
+        },
+        "section5": {
+            "title": "5. Ethics and Legal Studies (25 Hours)",
+            "items": [
+                "Code of Ethics: Understanding ethical guidelines and professional conduct.",
+                "Legal Case Studies: Analyzing real-world legal scenarios and implications.",
+                "Indications and Limits of Massage: Guidelines for safe practice."
+            ]
+        },
+        "section6": {
+            "title": "6. Practicum and Supervision (200 Hours)",
+            "items": [
+                "Supervised Practice: Hands-on practice under expert supervision.",
+                "Interview Techniques and Record Keeping: Best practices for client interactions and maintaining accurate records."
+            ]
+        }
+    },
+    "why_train_with_us": "Why Train with Us?",
+    "why_train_list": [
+        "Comprehensive Curriculum: Our training covers all essential aspects of Tui Na therapy.",
+        "Experienced Instructors: Learn from highly qualified and experienced professionals.",
+        "Hands-On Practice: Gain practical experience through supervised training sessions.",
+        "Professional Recognition: Our program is recognized by insurance companies, ensuring your qualifications are credible and trusted."
+    ],
+    "enroll_today": "Enroll Today",
+    "paragraph2": "Join our training program and become a certified Tui Na therapist. Equip yourself with the knowledge, skills, and confidence to excel in your practice.",
+    "become_member_today": "Become a member today"
+}

@@ -1,0 +1,63 @@
+{
+    "main_splash_alt": "Image principale",
+    "training_program": "Programme de formation",
+    "paragraph1": "L'Association de Tui Na du Canada offre un programme de formation complet conçu pour équiper les thérapeutes des compétences et des connaissances nécessaires pour fournir une thérapie Tui Na de haute qualité. Notre programme garantit que les membres sont bien préparés pour répondre aux normes les plus élevées de pratique professionnelle.",
+    "program_overview": "Aperçu du programme",
+    "total_training_hours": "Total des heures de formation : 700 heures",
+    "sections": {
+        "section1": {
+            "title": "1. Introduction à la massothérapie (125 heures)",
+            "items": [
+                "Anatomie : Comprendre la structure du corps humain.",
+                "Hygiène : Meilleures pratiques pour maintenir un environnement propre et sûr.",
+                "Pathologie : Identifier et comprendre les affections courantes.",
+                "Physiologie : Étudier les fonctions corporelles et leur pertinence pour la thérapie."
+            ]
+        },
+        "section2": {
+            "title": "2. Théorie et pratique de la massothérapie (150 heures)",
+            "items": [
+                "Massage thérapeutique détaillé : Techniques et applications approfondies.",
+                "Techniques de massage : Tui Na, thaï, shiatsu, massage suédois, et plus."
+            ]
+        },
+        "section3": {
+            "title": "3. Tui Na et traitements médicaux (100 heures)",
+            "items": [
+                "Concepts des méridiens d'acupuncture : Principes du Yin Yang et du Fuzang.",
+                "Réflexologie plantaire : Techniques et manipulation du massage des pieds."
+            ]
+        },
+        "section4": {
+            "title": "4. Réflexologie (50 heures)",
+            "items": [
+                "Zones réflexes du pied : Techniques et applications pour des résultats thérapeutiques."
+            ]
+        },
+        "section5": {
+            "title": "5. Éthique et études juridiques (25 heures)",
+            "items": [
+                "Code d'éthique : Comprendre les directives éthiques et la conduite professionnelle.",
+                "Études de cas juridiques : Analyse de scénarios juridiques réels et implications.",
+                "Indications et limites du massage : Directives pour une pratique sûre."
+            ]
+        },
+        "section6": {
+            "title": "6. Pratique et supervision (200 heures)",
+            "items": [
+                "Pratique supervisée : Pratique pratique sous supervision experte.",
+                "Techniques d'entretien et tenue de dossiers : Meilleures pratiques pour les interactions avec les clients et la tenue de dossiers précis."
+            ]
+        }
+    },
+    "why_train_with_us": "Pourquoi se former avec nous ?",
+    "why_train_list": [
+        "Programme complet : Notre formation couvre tous les aspects essentiels de la thérapie Tui Na.",
+        "Instructeurs expérimentés : Apprenez auprès de professionnels hautement qualifiés et expérimentés.",
+        "Pratique pratique : Acquérez une expérience pratique grâce à des séances de formation supervisées.",
+        "Reconnaissance professionnelle : Notre programme est reconnu par les compagnies d'assurance, garantissant que vos qualifications sont crédibles et fiables."
+    ],
+    "enroll_today": "Inscrivez-vous dès aujourd'hui",
+    "paragraph2": "Rejoignez notre programme de formation et devenez un thérapeute Tui Na certifié. Équipez-vous des connaissances, des compétences et de la confiance nécessaires pour exceller dans votre pratique.",
+    "become_member_today": "Devenez membre dès aujourd'hui"
+}
