@@ -1,0 +1,143 @@
+{
+    "main_splash_alt": "Image de la page d'inscription",
+    "start_registration": "Commencez votre inscription en tant que membre",
+    "sections": {
+        "RegistrationsForm": {
+            "form": {
+                "required_fields_note": "Les champs marqués avec {{symbol}} sont obligatoires",
+                "send_registration": "Envoyer l'inscription",
+                "personal_information": "Informations personnelles",
+                "location_information": "Informations de localisation",
+                "title": {
+                    "label": "Titre",
+                    "errors": {
+                        "invalid_type": "Le titre est invalide.",
+                        "empty": "Le titre ne peut pas être vide."
+                    }
+                },
+                "first_name": {
+                    "label": "Prénom",
+                    "errors": {
+                        "invalid_type": "Le prénom est invalide.",
+                        "empty": "Le prénom ne peut pas être vide."
+                    }
+                },
+                "middle_name": {
+                    "label": "Deuxième prénom",
+                    "errors": {
+                        "invalid_type": "Le deuxième prénom est invalide."
+                    }
+                },
+                "last_name": {
+                    "label": "Nom de famille",
+                    "errors": {
+                        "invalid_type": "Le nom de famille est invalide.",
+                        "empty": "Le nom de famille ne peut pas être vide."
+                    }
+                },
+                "email": {
+                    "label": "Courriel",
+                    "errors": {
+                        "invalid_type": "Le courriel est invalide.",
+                        "empty": "Le courriel ne peut pas être vide.",
+                        "invalid": "Veuillez entrer une adresse courriel valide."
+                    }
+                },
+                "phone": {
+                    "label": "Téléphone",
+                    "errors": {
+                        "invalid_type": "Le téléphone est invalide.",
+                        "empty": "Le téléphone ne peut pas être vide."
+                    }
+                },
+                "sex": {
+                    "label": "Sexe",
+                    "errors": {
+                        "invalid_type": "Le sexe est invalide.",
+                        "empty": "Le sexe ne peut pas être vide."
+                    }
+                },
+                "date_of_birth": {
+                    "label": "Date de naissance",
+                    "errors": {
+                        "invalid_type": "La date de naissance est invalide.",
+                        "empty": "La date de naissance ne peut pas être vide.",
+                        "date": "Veuillez entrer une date valide."
+                    }
+                },
+                "address": {
+                    "label": "Adresse",
+                    "errors": {
+                        "invalid_type": "L'adresse est invalide.",
+                        "empty": "L'adresse ne peut pas être vide."
+                    }
+                },
+                "address2": {
+                    "label": "App./Suite",
+                    "errors": {
+                        "invalid_type": "L'appartement/la suite est invalide."
+                    }
+                },
+                "city": {
+                    "label": "Ville",
+                    "errors": {
+                        "invalid_type": "La ville est invalide.",
+                        "empty": "La ville ne peut pas être vide."
+                    }
+                },
+                "province": {
+                    "label": "Province",
+                    "errors": {
+                        "invalid_type": "La province est invalide.",
+                        "empty": "La province ne peut pas être vide."
+                    }
+                },
+                "zip": {
+                    "label": "Code postal",
+                    "errors": {
+                        "invalid_type": "Le code postal est invalide.",
+                        "empty": "Le code postal ne peut pas être vide."
+                    }
+                },
+                "country": {
+                    "label": "Pays",
+                    "errors": {
+                        "invalid_type": "Le pays est invalide.",
+                        "empty": "Le pays ne peut pas être vide."
+                    }
+                },
+                "titles": {
+                    "Mr": "M.",
+                    "Ms": "Mlle",
+                    "Mrs": "Mme"
+                },
+                "sexes": {
+                    "M": "Homme",
+                    "F": "Femme"
+                },
+                "provinces": {
+                    "AB": "Alberta",
+                    "BC": "Colombie-Britannique",
+                    "MB": "Manitoba",
+                    "NB": "Nouveau-Brunswick",
+                    "NL": "Terre-Neuve-et-Labrador",
+                    "NT": "Territoires du Nord-Ouest",
+                    "NS": "Nouvelle-Écosse",
+                    "NU": "Nunavut",
+                    "ON": "Ontario",
+                    "PE": "Île-du-Prince-Édouard",
+                    "QC": "Québec",
+                    "SK": "Saskatchewan",
+                    "YT": "Yukon"
+                },
+                "countries": {
+                    "Canada": "Canada"
+                }
+            }
+        },
+        "form_success": {
+            "title": "Merci.",
+            "message": "Votre inscription a été soumise avec succès."
+        }
+    }
+}

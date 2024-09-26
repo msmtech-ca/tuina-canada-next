@@ -1,9 +1,10 @@
+// RegistrationsForm.tsx
+
 "use client"
 import Button from '@/app/_components/Button'
 import Input from '@/app/_components/Input'
 import Select from '@/app/_components/Select'
 import { handleAddRegistration } from '@/app/actions'
-import { countries, provinces, sexes, titles } from '@/src/lib/constants'
 import { registrationSchema } from '@/src/validation'
 import { useFormState, useFormStatus } from 'react-dom'
 import FormSuccessMessage from './FormSuccessMessage'
@@ -11,47 +12,54 @@ import FormSuccessMessage from './FormSuccessMessage'
 const initialState = registrationSchema._output
 
 interface RegistrationsFormProps {
+    lng: string
+    t: { [key: string]: any }
+    options: {
+        titles: { value: string; label: string }[]
+        sexes: { value: string; label: string }[]
+        provinces: { value: string; label: string }[]
+        countries: { value: string; label: string }[]
+    }
 }
 
-export default function RegistrationsForm({}: RegistrationsFormProps) {
-
+export default function RegistrationsForm({ lng, t, options }: RegistrationsFormProps) {
     const [state, formAction] = useFormState(handleAddRegistration, initialState)
 
     function SubmitButton() {
         const { pending } = useFormStatus()
         return (
-            <Button
-                className={`mt-4`}
-                variant={`dark`}
-                loading={pending}
-            >{`Send registration`}</Button>
+            <Button className={`mt-4`} variant={`dark`} loading={pending}>
+                {t.RegistrationsForm.form.send_registration}
+            </Button>
         )
     }
 
     return state?.result?.success === true ? (
-        <FormSuccessMessage />
+        <FormSuccessMessage
+            t={t.ContactForm}
+        />
     ) : (
-        <form
-            action={formAction}
-        >
-            <div>(<span className={`text-red-600`}>*</span>) are required fields</div>
+        <form action={formAction}>
+            <input name={`lng`} hidden value={lng} readOnly />
+            <div dangerouslySetInnerHTML={{__html: t.RegistrationsForm.form.required_fields_note}}>
+            </div>
             <div className={`mt-4 flex flex-col gap-4`}>
                 <div>
-                    <h2 className={`text-2xl leading-none font-bold mb-4`}>{`Personal Information`}</h2>
+                    <h2 className={`text-2xl leading-none font-bold mb-4`}>{t.RegistrationsForm.form.personal_information}</h2>
                     <div className={`grid grid-cols-12 gap-4`}>
                         <div className={`col-span-3`}>
                             <Select
-                                labelName={`Title`}
+                                labelName={t.RegistrationsForm.form.title.label}
                                 name={`title`}
                                 error={state?.errors?.title}
-                                options={titles}
+                                options={options.titles}
                                 required
                                 defaultValue={initialState?.title ?? undefined}
                             />
                         </div>
                         <div className={`col-span-3`}>
                             <Input
-                                labelName={`First Name`}
+                                labelName={t.RegistrationsForm.form.first_name.label}
                                 name={`firstName`}
                                 error={state?.errors?.firstName}
                                 type={`text`}
@@ -61,7 +69,7 @@ export default function RegistrationsForm({}: RegistrationsFormProps) {
                         </div>
                         <div className={`col-span-3`}>
                             <Input
-                                labelName={`Middle Name`}
+                                labelName={t.RegistrationsForm.form.middle_name.label}
                                 name={`middleName`}
                                 error={state?.errors?.middleName}
                                 type={`text`}
@@ -70,7 +78,7 @@ export default function RegistrationsForm({}: RegistrationsFormProps) {
                         </div>
                         <div className={`col-span-3`}>
                             <Input
-                                labelName={`Last Name`}
+                                labelName={t.RegistrationsForm.form.last_name.label}
                                 name={`lastName`}
                                 error={state?.errors?.lastName}
                                 type={`text`}
@@ -82,7 +90,7 @@ export default function RegistrationsForm({}: RegistrationsFormProps) {
                     <div className={`grid grid-cols-2 gap-4`}>
                         <div>
                             <Input
-                                labelName={`Email`}
+                                labelName={t.RegistrationsForm.form.email.label}
                                 name={`email`}
                                 error={state?.errors?.email}
                                 type={`email`}
@@ -92,7 +100,7 @@ export default function RegistrationsForm({}: RegistrationsFormProps) {
                         </div>
                         <div>
                             <Input
-                                labelName={`Phone`}
+                                labelName={t.RegistrationsForm.form.phone.label}
                                 name={`phone`}
                                 error={state?.errors?.phone}
                                 type={`tel`}
@@ -104,17 +112,17 @@ export default function RegistrationsForm({}: RegistrationsFormProps) {
                     <div className={`grid grid-cols-2 gap-4`}>
                         <div>
                             <Select
-                                labelName={`Sex`}
+                                labelName={t.RegistrationsForm.form.sex.label}
                                 name={`sex`}
                                 error={state?.errors?.sex}
-                                options={sexes}
+                                options={options.sexes}
                                 required
                                 defaultValue={initialState?.sex ?? undefined}
                             />
                         </div>
                         <div>
                             <Input
-                                labelName={`Date of birth`}
+                                labelName={t.RegistrationsForm.form.date_of_birth.label}
                                 name={`dateOfBirth`}
                                 error={state?.errors?.dateOfBirth}
                                 type={`date`}
@@ -125,11 +133,11 @@ export default function RegistrationsForm({}: RegistrationsFormProps) {
                     </div>
                 </div>
                 <div className={`border-t border-t-neutral-600 mt-4 pt-4`}>
-                    <h2 className={`text-2xl leading-none font-bold mb-4`}>{`Location Information`}</h2>
+                    <h2 className={`text-2xl leading-none font-bold mb-4`}>{t.RegistrationsForm.form.location_information.label}</h2>
                     <div className={`grid grid-cols-12 gap-4`}>
                         <div className={`col-span-8`}>
                             <Input
-                                labelName={`Address`}
+                                labelName={t.RegistrationsForm.form.address.label}
                                 name={`address1`}
                                 error={state?.errors?.address1}
                                 type={`text`}
@@ -139,7 +147,7 @@ export default function RegistrationsForm({}: RegistrationsFormProps) {
                         </div>
                         <div className={`col-span-4`}>
                             <Input
-                                labelName={`Apt./Suite`}
+                                labelName={t.RegistrationsForm.form.address2.label}
                                 name={`address2`}
                                 error={state?.errors?.address2}
                                 type={`text`}
@@ -150,7 +158,7 @@ export default function RegistrationsForm({}: RegistrationsFormProps) {
                     <div className={`grid grid-cols-12 gap-4`}>
                         <div className={`col-span-3`}>
                             <Input
-                                labelName={`City`}
+                                labelName={t.RegistrationsForm.form.city.label}
                                 name={`city`}
                                 error={state?.errors?.city}
                                 type={`text`}
@@ -160,17 +168,17 @@ export default function RegistrationsForm({}: RegistrationsFormProps) {
                         </div>
                         <div className={`col-span-3`}>
                             <Select
-                                labelName={`Province`}
+                                labelName={t.RegistrationsForm.form.province.label}
                                 name={`province`}
                                 error={state?.errors?.province}
-                                options={provinces}
+                                options={options.provinces}
                                 required
                                 defaultValue={initialState?.province ?? undefined}
                             />
                         </div>
                         <div className={`col-span-3`}>
                             <Input
-                                labelName={`Postal/zip code`}
+                                labelName={t.RegistrationsForm.form.zip.label}
                                 name={`zip`}
                                 error={state?.errors?.zip}
                                 type={`text`}
@@ -180,10 +188,10 @@ export default function RegistrationsForm({}: RegistrationsFormProps) {
                         </div>
                         <div className={`col-span-3`}>
                             <Select
-                                labelName={`Country`}
+                                labelName={t.RegistrationsForm.form.country.label}
                                 name={`country`}
                                 error={state?.errors?.country}
-                                options={countries}
+                                options={options.countries}
                                 required
                                 defaultValue={initialState?.country ?? undefined}
                             />

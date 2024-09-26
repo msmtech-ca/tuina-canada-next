@@ -1,0 +1,143 @@
+{
+    "main_splash_alt": "Registration Page Image",
+    "start_registration": "Start your Member Registration",
+    "sections": {
+        "RegistrationsForm": {
+            "form": {
+                "required_fields_note": "Fields marked with {{symbol}} are required",
+                "send_registration": "Send registration",
+                "personal_information": "Personal Information",
+                "location_information": "Location Information",
+                "title": {
+                    "label": "Title",
+                    "errors": {
+                        "invalid_type": "Title is invalid.",
+                        "empty": "Title cannot be empty."
+                    }
+                },
+                "first_name": {
+                    "label": "First Name",
+                    "errors": {
+                        "invalid_type": "First name is invalid.",
+                        "empty": "First name cannot be empty."
+                    }
+                },
+                "middle_name": {
+                    "label": "Middle Name",
+                    "errors": {
+                        "invalid_type": "Middle name is invalid."
+                    }
+                },
+                "last_name": {
+                    "label": "Last Name",
+                    "errors": {
+                        "invalid_type": "Last name is invalid.",
+                        "empty": "Last name cannot be empty."
+                    }
+                },
+                "email": {
+                    "label": "Email",
+                    "errors": {
+                        "invalid_type": "Email is invalid.",
+                        "empty": "Email cannot be empty.",
+                        "invalid": "Please enter a valid email address."
+                    }
+                },
+                "phone": {
+                    "label": "Phone",
+                    "errors": {
+                        "invalid_type": "Phone is invalid.",
+                        "empty": "Phone cannot be empty."
+                    }
+                },
+                "sex": {
+                    "label": "Sex",
+                    "errors": {
+                        "invalid_type": "Sex is invalid.",
+                        "empty": "Sex cannot be empty."
+                    }
+                },
+                "date_of_birth": {
+                    "label": "Date of Birth",
+                    "errors": {
+                        "invalid_type": "Date of birth is invalid.",
+                        "empty": "Date of birth cannot be empty.",
+                        "date": "Please enter a valid date."
+                    }
+                },
+                "address": {
+                    "label": "Address",
+                    "errors": {
+                        "invalid_type": "Address is invalid.",
+                        "empty": "Address cannot be empty."
+                    }
+                },
+                "address2": {
+                    "label": "Apt./Suite",
+                    "errors": {
+                        "invalid_type": "Apt./Suite is invalid."
+                    }
+                },
+                "city": {
+                    "label": "City",
+                    "errors": {
+                        "invalid_type": "City is invalid.",
+                        "empty": "City cannot be empty."
+                    }
+                },
+                "province": {
+                    "label": "Province",
+                    "errors": {
+                        "invalid_type": "Province is invalid.",
+                        "empty": "Province cannot be empty."
+                    }
+                },
+                "zip": {
+                    "label": "Postal/Zip Code",
+                    "errors": {
+                        "invalid_type": "Postal/Zip code is invalid.",
+                        "empty": "Postal/Zip code cannot be empty."
+                    }
+                },
+                "country": {
+                    "label": "Country",
+                    "errors": {
+                        "invalid_type": "Country is invalid.",
+                        "empty": "Country cannot be empty."
+                    }
+                },
+                "titles": {
+                    "Mr": "Mr",
+                    "Ms": "Ms",
+                    "Mrs": "Mrs"
+                },
+                "sexes": {
+                    "M": "Male",
+                    "F": "Female"
+                },
+                "provinces": {
+                    "AB": "Alberta",
+                    "BC": "British Columbia",
+                    "MB": "Manitoba",
+                    "NB": "New Brunswick",
+                    "NL": "Newfoundland and Labrador",
+                    "NT": "Northwest Territories",
+                    "NS": "Nova Scotia",
+                    "NU": "Nunavut",
+                    "ON": "Ontario",
+                    "PE": "Prince Edward Island",
+                    "QC": "Quebec",
+                    "SK": "Saskatchewan",
+                    "YT": "Yukon"
+                },
+                "countries": {
+                    "Canada": "Canada"
+                }
+            },
+            "form_success": {
+                "title": "Thank you.",
+                "message": "Your registration has been submitted successfully."
+            }
+        }
+    }
+}

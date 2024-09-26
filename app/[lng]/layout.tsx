@@ -60,42 +60,42 @@ export default async function RootLayout({
                         <ul className={`flex items-center gap-8 text-lg`}>
                             <li>
                                 <Link
-                                    href={`/pages/objective`}
+                                    href={`/${lng}/pages/objective`}
                                 >
                                     {t('navigation.objective')}
                                 </Link>
                             </li>
                             <li>
                                 <Link
-                                    href={`/pages/training`}
+                                    href={`/${lng}/pages/training`}
                                 >
                                     {t('navigation.training')}
                                 </Link>
                             </li>
                             <li>
                                 <Link
-                                    href={`/pages/advantages`}
+                                    href={`/${lng}/pages/advantages`}
                                 >
                                     {t('navigation.advantages')}
                                 </Link>
                             </li>
                             <li>
                                 <Link
-                                    href={`/pages/insurance`}
+                                    href={`/${lng}/pages/insurance`}
                                 >
                                     {t('navigation.insurance')}
                                 </Link>
                             </li>
                             <li>
                                 <Link
-                                    href={`/pages/contact`}
+                                    href={`/${lng}/pages/contact`}
                                 >
                                     {t('navigation.contact')}
                                 </Link>
                             </li>
                             <li>
                                 <Link
-                                    href={`/members/home/dashboard`}
+                                    href={`/${lng}/members/home/dashboard`}
                                 >
                                     {t('navigation.members')}
                                 </Link>
@@ -130,28 +130,28 @@ export default async function RootLayout({
                                     <ul className={`mt-4 flex flex-col gap-2`}>
                                         <li>
                                             <Link
-                                                href={`/pages/objective`}
+                                                href={`/${lng}/pages/objective`}
                                             >
                                                 {t('navigation.objective')}
                                             </Link>
                                         </li>
                                         <li>
                                             <Link
-                                                href={`/pages/training`}
+                                                href={`/${lng}/pages/training`}
                                             >
                                                 {t('navigation.training')}
                                             </Link>
                                         </li>
                                         <li>
                                             <Link
-                                                href={`/pages/advantages`}
+                                                href={`/${lng}/pages/advantages`}
                                             >
                                                 {t('navigation.advantages')}
                                             </Link>
                                         </li>
                                         <li>
                                             <Link
-                                                href={`/pages/insurance`}
+                                                href={`/${lng}/pages/insurance`}
                                             >
                                                 {t('navigation.insurance')}
                                             </Link>
@@ -196,16 +196,16 @@ export default async function RootLayout({
                         <div className={`mt-24 px-2 py-8 border-t border-neutral-600 flex justify-between`}>
                             <div className={`text-sm`}>
                                 {t('footer.copy')}
-                                <Link href={`https://msmtech.ca`}>{t('footer.web_solution')}</Link>
+                                <Link href={`https://msmtech.ca/${lng}`}>{t('footer.web_solution')}</Link>
                             </div>
                             <div className={`flex gap-8 text-sm`}>
                                 <Link
-                                    href={`/pages/privacy-policy`}
+                                    href={`/${lng}/pages/privacy-policy`}
                                 >
                                     {t('footer.privacy_policy')}
                                 </Link>
                                 <Link
-                                    href={`/pages/terms-conditions`}
+                                    href={`/${lng}/pages/terms-conditions`}
                                 >
                                     {t('footer.terms_conditions')}
                                 </Link>

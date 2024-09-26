@@ -25,7 +25,9 @@ export default function ContactForm({ lng, t }: ContactFormProps) {
     const translations = t.ContactForm
 
     return state?.result?.success === true ? (
-        <FormSuccessMessage t={t} />
+        <FormSuccessMessage
+            t={t}
+        />
     ) : (
         <form action={formAction}>
             <input name={`lng`} hidden value={lng} readOnly />

@@ -165,73 +165,73 @@ export const changeRegistrationStatusSchema = z.object({
 export const registrationSchema = z.object({
     title: z
         .string({
-            invalid_type_error: 'Title is invalid.'
+            invalid_type_error: 'form.title.errors.invalid_type',
         })
-        .min(1, 'Title cannot be empty.'),
+        .min(1, 'form.title.errors.empty'),
     firstName: z
         .string({
-            invalid_type_error: 'First name is invalid.'
+            invalid_type_error: 'form.first_name.errors.invalid_type',
         })
-        .min(1, 'First name cannot be empty.'),
+        .min(1, 'form.first_name.errors.empty'),
     middleName: z
         .string({
-            invalid_type_error: 'Middle Name is invalid.'
+            invalid_type_error: 'form.middle_name.errors.invalid_type',
         })
         .nullable(),
     lastName: z
         .string({
-            invalid_type_error: 'Last name is invalid.'
+            invalid_type_error: 'form.last_name.errors.invalid_type',
         })
-        .min(1, 'Last name cannot be empty.'),
+        .min(1, 'form.last_name.errors.empty'),
     sex: z
         .string({
-            invalid_type_error: 'Sex is invalid.'
+            invalid_type_error: 'form.sex.errors.invalid_type',
         })
-        .min(1, 'Sex cannot be empty.'),
+        .min(1, 'form.sex.errors.empty'),
     dateOfBirth: z
         .string({
-            invalid_type_error: 'Date is invalid.'
+            invalid_type_error: 'form.date_of_birth.errors.invalid_type',
         })
-        .date(),
+        .date('form.date_of_birth.errors.date'),
     email: z
         .string({
-            invalid_type_error: 'Email is invalid.'
+            invalid_type_error: 'form.email.errors.invalid_type',
         })
-        .email()
-        .min(1, 'Email cannot be empty.'),
+        .email('form.email.errors.invalid')
+        .min(1, 'form.email.errors.empty'),
     phone: z
         .string({
-            invalid_type_error: 'Phone is invalid.'
+            invalid_type_error: 'form.phone.errors.invalid_type',
         })
-        .min(1, 'Phone cannot be empty.'),
+        .min(1, 'form.phone.errors.empty'),
     address1: z
         .string({
-            invalid_type_error: 'Address is invalid.'
+            invalid_type_error: 'form.address.errors.invalid_type',
         })
-        .min(1, 'Address cannot be empty.'),
+        .min(1, 'form.address.errors.empty'),
     address2: z
         .string({
-            invalid_type_error: 'Apt./Suite is invalid.'
+            invalid_type_error: 'form.address2.errors.invalid_type',
         })
         .nullable(),
     city: z
         .string({
-            invalid_type_error: 'City is invalid.'
+            invalid_type_error: 'form.city.errors.invalid_type',
         })
-        .min(1, 'City cannot be empty.'),
+        .min(1, 'form.city.errors.empty'),
     province: z
         .string({
-            invalid_type_error: 'Province is invalid.'
+            invalid_type_error: 'form.province.errors.invalid_type',
         })
-        .min(1, 'Province cannot be empty.'),
+        .min(1, 'form.province.errors.empty'),
     zip: z
         .string({
-            invalid_type_error: 'Postal/zip code is invalid.'
+            invalid_type_error: 'form.zip.errors.invalid_type',
         })
-        .min(1, 'Postal/zip code cannot be empty.'),
+        .min(1, 'form.zip.errors.empty'),
     country: z
         .string({
-            invalid_type_error: 'Country is invalid.'
+            invalid_type_error: 'form.country.errors.invalid_type',
         })
-        .min(1, 'Country cannot be empty.'),
-})
+        .min(1, 'form.country.errors.empty'),
+});

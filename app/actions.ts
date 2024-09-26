@@ -549,21 +549,32 @@ export async function handleAddRegistration(prevState: any, formData: FormData) 
         province: formData.get('province'),
         zip: formData.get('zip'),
         country: formData.get('country'),
-        userId: formData.get('userId'),
     })
 
     // Return early if the form data is invalid
     if (!validatedFields.success) {
 
+        const errors = validatedFields.error.flatten().fieldErrors
+        const lng = formData.get('lng') as string || 'en'
+        const { t } = await unhookedTranslation(lng, 'members/register')
+
+        const translatedErrors = errors;
+        for (const [field, fieldErrors] of Object.entries(errors)) {
+            if (fieldErrors) {
+                translatedErrors[field as keyof typeof errors] = fieldErrors.map((errorKey) => t(`sections.RegistrationsForm.${errorKey}`));
+            }
+        }
+
         const response = {
             result: null,
-            errors: validatedFields.error.flatten().fieldErrors,
+            errors: translatedErrors,
         }
 
         console.info('handleAddRegistration action form is invalid', {
             formData: formData,
             result: response.result,
             errors: response.errors,
+            translatedErrors: translatedErrors,
         })
 
         return response
