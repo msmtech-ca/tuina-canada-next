@@ -4,6 +4,7 @@ import Image from 'next/image'
 import '@/app//globals.css'
 import Link from 'next/link'
 import { useTranslation } from '@/app/_components/i18n'
+import LangSelector from '../_components/LangSelector'
 
 const gentium = Gentium_Book_Plus({
     subsets: ['latin'],
@@ -46,7 +47,7 @@ export default async function RootLayout({
                 <header>
                     <nav className={`flex justify-between items-center gap-4 px-4 py-2 shadow border-b border-neutral-600 z-10 relative`}>
                         <Link
-                            href={`/`}
+                            href={`/${lng}`}
                             className={`block`}
                         >
                             <Image
@@ -99,6 +100,11 @@ export default async function RootLayout({
                                 >
                                     {t('navigation.members')}
                                 </Link>
+                            </li>
+                            <li>
+                                <LangSelector
+                                    lng={lng}
+                                />
                             </li>
                         </ul>
                     </nav>
@@ -158,10 +164,15 @@ export default async function RootLayout({
                                         </li>
                                     </ul>
                                 </div>
-                                {/* <div>
-                                    <h3 className={`text-2xl font-serif font-bold`}>Resources</h3>
+                                <div>
+                                    <h3 className={`text-2xl font-serif font-bold`}>{t('footer.choose_your_language')}</h3>
                                     <ul className={`mt-4 flex flex-col gap-2`}>
                                         <li>
+                                            <LangSelector
+                                                lng={lng}
+                                            />
+                                        </li>
+                                        {/* <li>
                                             <Link
                                                 href={`/`}
                                             >
@@ -188,9 +199,9 @@ export default async function RootLayout({
                                             >
                                                 Resource 4
                                             </Link>
-                                        </li>
+                                        </li> */}
                                     </ul>
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                         <div className={`mt-24 px-2 py-8 border-t border-neutral-600 flex justify-between`}>

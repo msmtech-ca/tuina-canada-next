@@ -1,0 +1,51 @@
+{
+    "title": "Politique de Confidentialité",
+    "introduction": {
+        "title": "Introduction",
+        "text": "Bienvenue à l'Association Canadienne de Tui Na. Nous accordons une grande importance à votre vie privée et nous nous engageons à protéger vos informations personnelles. Cette Politique de Confidentialité décrit comment nous collectons, utilisons et protégeons vos informations lorsque vous visitez notre site web et utilisez nos services."
+    },
+    "information_we_collect": {
+        "title": "Informations que Nous Collectons",
+        "text": "Nous collectons les types d'informations suivants pour faire fonctionner notre association efficacement :",
+        "personal_information": "Informations Personnelles : Lorsque vous vous inscrivez pour devenir membre, nous collectons des détails personnels tels que votre nom, votre adresse, votre email, votre numéro de téléphone et vos qualifications professionnelles.",
+        "payment_information": "Informations de Paiement : Pour les frais d'adhésion et autres transactions, nous collectons les détails de paiement via Stripe, un service de traitement de paiement sécurisé.",
+        "usage_data": "Données d'Utilisation : Nous utilisons Google Analytics pour collecter des données sur la façon dont les visiteurs interagissent avec notre site web. Cela inclut des informations sur votre navigateur, votre adresse IP, les pages visitées et le temps passé sur chaque page."
+    },
+    "how_we_use_your_information": {
+        "title": "Comment Nous Utilisons Vos Informations",
+        "text": "Les informations que nous collectons sont utilisées aux fins suivantes :",
+        "membership_management": "Gestion des Adhésions : Pour traiter votre demande d'adhésion, maintenir notre base de données des membres et vous fournir les avantages liés à l'adhésion.",
+        "payment_processing": "Traitement des Paiements : Pour traiter en toute sécurité les paiements des frais d'adhésion et autres transactions.",
+        "website_improvement": "Amélioration du Site Web : Pour analyser l'utilisation du site web et améliorer nos services et l'expérience utilisateur."
+    },
+    "data_sharing_and_security": {
+        "title": "Partage et Sécurité des Données",
+        "text": "Nous nous engageons à assurer la sécurité de vos informations. Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles. Nous ne vendons, n'échangeons ni ne transférons vos informations personnelles à des tiers, sauf dans les cas suivants :",
+        "service_providers": "Fournisseurs de Services : Nous pouvons partager des informations avec des fournisseurs de services tiers (tels que Stripe et Google Analytics) qui nous aident à exploiter notre site web et à mener nos activités, tant que ces parties conviennent de garder ces informations confidentielles.",
+        "legal_requirements": "Exigences Légales : Nous pouvons divulguer vos informations si la loi l'exige ou en réponse à des demandes valables des autorités publiques."
+    },
+    "cookies_and_tracking_technologies": {
+        "title": "Cookies et Technologies de Suivi",
+        "text": "Notre site web utilise des cookies et des technologies de suivi similaires pour améliorer votre expérience. Les cookies sont de petits fichiers qu'un site ou son fournisseur de services transfère sur le disque dur de votre ordinateur via votre navigateur web (si vous l'autorisez) qui permettent aux systèmes du site ou du fournisseur de services de reconnaître votre navigateur et de capturer et mémoriser certaines informations."
+    },
+    "your_rights": {
+        "title": "Vos Droits",
+        "text": "Vous avez le droit d'accéder, de corriger ou de supprimer vos informations personnelles. Si vous souhaitez exercer ces droits ou si vous avez des questions sur nos pratiques en matière de confidentialité, veuillez nous contacter en utilisant les informations fournies ci-dessous."
+    },
+    "contact_us": {
+        "title": "Nous Contacter",
+        "text": "Si vous avez des questions concernant cette Politique de Confidentialité, veuillez nous contacter à :"
+    },
+    "contact_information": {
+        "name": "Association Canadienne de Tui Na",
+        "address_line1": "123 rue du Bien-Être",
+        "address_line2": "Toronto, ON, M1A 2B3",
+        "country": "Canada",
+        "phone": "Téléphone : +1 (123) 456-7890",
+        "email": "Courriel : info@tuinaducanada.ca"
+    },
+    "changes_to_privacy_policy": {
+        "title": "Modifications de Cette Politique de Confidentialité",
+        "text": "Nous pouvons mettre à jour notre Politique de Confidentialité de temps à autre. Nous vous informerons de tout changement en publiant la nouvelle Politique de Confidentialité sur cette page. Nous vous encourageons à consulter périodiquement cette Politique de Confidentialité pour tout changement. Les modifications apportées à cette Politique de Confidentialité sont effectives dès leur publication sur cette page."
+    }
+}

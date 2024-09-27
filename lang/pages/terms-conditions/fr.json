@@ -1,0 +1,49 @@
+{
+    "title": "Conditions Générales",
+    "introduction": {
+        "title": "Introduction",
+        "text": "Bienvenue sur le site de l'Association Canadienne de Tui Na. En accédant et en utilisant notre site web, vous acceptez de vous conformer aux présentes conditions générales. Veuillez les lire attentivement. Si vous n'êtes pas d'accord avec une partie de ces conditions, veuillez ne pas utiliser notre site web."
+    },
+    "use_of_the_website": {
+        "title": "Utilisation du Site Web",
+        "eligibility": "Admissibilité : Vous devez avoir au moins 18 ans pour utiliser notre site web et nos services.",
+        "account_responsibility": "Responsabilité du Compte : Si vous créez un compte sur notre site web, vous êtes responsable de maintenir la confidentialité de vos informations de compte et de votre mot de passe. Vous acceptez d'assumer la responsabilité de toutes les activités effectuées sous votre compte.",
+        "prohibited_conduct": "Conduite Interdite : Vous acceptez de ne pas utiliser notre site web à des fins illégales ou de vous engager dans une conduite qui pourrait nuire à l'Association Canadienne de Tui Na, à ses membres ou à d'autres utilisateurs."
+    },
+    "membership_and_services": {
+        "title": "Adhésion et Services",
+        "membership_application": "Demande d'Adhésion : En postulant pour devenir membre, vous acceptez de fournir des informations exactes et complètes. L'Association Canadienne de Tui Na se réserve le droit d'accepter ou de refuser toute demande d'adhésion à sa discrétion.",
+        "membership_benefits": "Avantages de l'Adhésion : Les avantages de l'adhésion sont fournis tels que décrits sur notre site web et sont susceptibles d'être modifiés sans préavis.",
+        "payment": "Paiement : Les frais d'adhésion et autres charges sont traités via des méthodes de paiement sécurisées. En fournissant des informations de paiement, vous acceptez les termes et conditions du processeur de paiement (par exemple, Stripe)."
+    },
+    "content_and_intellectual_property": {
+        "title": "Contenu et Propriété Intellectuelle",
+        "website_content": "Contenu du Site : Tout le contenu de notre site web, y compris le texte, les graphiques, les logos et les images, est la propriété de l'Association Canadienne de Tui Na ou de ses fournisseurs de contenu et est protégé par les lois sur les droits d'auteur et autres lois sur la propriété intellectuelle.",
+        "use_of_content": "Utilisation du Contenu : Vous ne pouvez pas reproduire, distribuer ou exploiter tout contenu de notre site web sans l'autorisation écrite préalable de l'Association Canadienne de Tui Na."
+    },
+    "limitation_of_liability": {
+        "title": "Limitation de Responsabilité",
+        "no_warranty": "Aucune Garantie : L'Association Canadienne de Tui Na fournit le site web et ses services \"en l'état\" et sans aucune garantie ou condition, expresse, implicite ou statutaire. Nous ne garantissons pas que le site web sera exempt d'erreurs ou ininterrompu.",
+        "liability_limitation": "Limitation de Responsabilité : En aucun cas, l'Association Canadienne de Tui Na ne sera responsable de tout dommage direct, indirect, accessoire, spécial ou consécutif découlant de l'utilisation ou de l'incapacité à utiliser notre site web ou nos services."
+    },
+    "governing_law": {
+        "title": "Droit Applicable",
+        "text": "Ces conditions générales sont régies et interprétées conformément aux lois de la province de l'Ontario et aux lois fédérales du Canada applicables. Tout litige découlant de ou lié à ces conditions sera résolu devant les tribunaux de la province de Québec."
+    },
+    "changes_to_terms_and_conditions": {
+        "title": "Modifications des Conditions Générales",
+        "text": "L'Association Canadienne de Tui Na se réserve le droit de mettre à jour ou de modifier ces conditions générales à tout moment sans préavis. Votre utilisation continue du site web après tout changement constitue votre acceptation des nouvelles conditions générales."
+    },
+    "contact_us": {
+        "title": "Nous Contacter",
+        "text": "Si vous avez des questions concernant ces conditions générales, veuillez nous contacter à :"
+    },
+    "contact_information": {
+        "name": "Association Canadienne de Tui Na",
+        "address_line1": "123 rue du Bien-Être",
+        "address_line2": "Toronto, ON, M1A 2B3",
+        "country": "Canada",
+        "phone": "Téléphone : +1 (123) 456-7890",
+        "email": "Courriel : info@tuinaducanada.ca"
+    }
+}
