@@ -34,10 +34,10 @@ export const caseSchema = z.object({
 export const loginInitiateSchema = z.object({
     email: z
         .string({
-            invalid_type_error: 'Email is invalid.'
+            invalid_type_error: 'form.email.errors.invalid_type',
         })
-        .email()
-        .min(1, 'Email cannot be empty.'),
+        .email('form.email.errors.invalid')
+        .min(1, 'form.email.errors.empty'),
 })
 
 export const addUserSchema = z.object({

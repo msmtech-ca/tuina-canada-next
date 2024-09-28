@@ -1,0 +1,23 @@
+{
+    "title": "Members Login",
+    "sections": {
+        "LoginForm": {
+            "prompt": "If you are a member of the association, we will send instructions to your email for logging in.",
+            "form": {
+                "email": {
+                    "label": "Email",
+                    "errors": {
+                        "invalid_type": "Email is invalid.",
+                        "empty": "Email cannot be empty.",
+                        "invalid": "Please enter a valid email address."
+                    }
+                },
+                "submit": "Login"
+            },
+            "success": {
+                "title": "Check your email.",
+                "message": "We sent an email to <b>{{email}}</b> with instructions to log in."
+            }
+        }
+    }
+}

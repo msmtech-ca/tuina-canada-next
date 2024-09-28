@@ -62,7 +62,11 @@ export default async function Page({ params }: { params: { lng: string } }) {
                     ))}
                 </ul>
                 <div className={`mt-12 w-full flex justify-center items-center`}>
-                    <Button to={`/members/register`} variant={`dark`}>
+                    <Button
+                        to={`/members/register`}
+                        variant={`dark`}
+                        lng={params.lng}
+                    >
                         {t('become_member_today')}
                     </Button>
                 </div>

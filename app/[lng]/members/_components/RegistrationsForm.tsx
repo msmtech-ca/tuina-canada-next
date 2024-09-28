@@ -28,7 +28,12 @@ export default function RegistrationsForm({ lng, t, options }: RegistrationsForm
     function SubmitButton() {
         const { pending } = useFormStatus()
         return (
-            <Button className={`mt-4`} variant={`dark`} loading={pending}>
+            <Button
+                className={`mt-4`}
+                variant={`dark`}
+                loading={pending}
+                lng={lng}
+            >
                 {t.RegistrationsForm.form.send_registration}
             </Button>
         )

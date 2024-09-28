@@ -78,12 +78,15 @@ export default function ContactForm({ lng, t }: ContactFormProps) {
                     />
                 </div>
             </div>
-            <SendButton sendMessageText={translations.form.send_message} />
+            <SendButton
+                lng={lng}
+                sendMessageText={translations.form.send_message}
+            />
         </form>
     )
 }
 
-function SendButton({ sendMessageText }: { sendMessageText: string }) {
+function SendButton({ lng, sendMessageText }: { lng: string; sendMessageText: string }) {
 
     const { pending } = useFormStatus()
 
@@ -92,6 +95,7 @@ function SendButton({ sendMessageText }: { sendMessageText: string }) {
             className={`mt-4`}
             variant={`dark`}
             loading={pending}
+            lng={lng}
         >
             {sendMessageText}
         </Button>

@@ -16,5 +16,8 @@
         "terms_conditions": "Conditions générales",
         "copy": "© 2024 Association canadienne de Tui Na. ",
         "web_solution": "Solution web par MSM TECHNOLOGIES"
+    },
+    "Button": {
+        "loading": "Veuillez patienter..."
     }
 }

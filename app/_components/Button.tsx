@@ -3,7 +3,9 @@
 import { spinnerIcon } from "@/src/lib/icons";
 import clsx from "clsx";
 import Link from "next/link";
-import { ButtonHTMLAttributes, AnchorHTMLAttributes, DetailedHTMLProps, PropsWithChildren } from "react"
+import { ButtonHTMLAttributes, AnchorHTMLAttributes, DetailedHTMLProps, PropsWithChildren, useEffect, useRef } from "react"
+import { useTranslation } from '@/app/_components/i18n/client'
+import { fallbackLng } from "./i18n/settings";
 
 type variants = 'light' | 'dark' | 'primary' | 'secondary' | 'tertiary';
 type sizes = 'small' | 'medium';
@@ -13,9 +15,12 @@ interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonE
     size?: sizes;
     variant?: variants;
     loading?: boolean;
+    lng?: string;
 }
 
 export default function Button(props: PropsWithChildren<ButtonProps>) {
+
+    const {t} = useTranslation(props.lng || fallbackLng, 'global')
 
     const { to, size='medium', variant='dark', loading=false, className, children, ...rest } = props
 
@@ -44,7 +49,7 @@ export default function Button(props: PropsWithChildren<ButtonProps>) {
         <button aria-disabled={loading || props.disabled} disabled={loading || props.disabled} className={clsx(baseClass, sizes[size], variants[variant], className)} {...rest}>
             {loading ? (
                 <>
-                    {`Please wait...`}
+                    {t('Button.loading')}
                 </>
             ) : (
                 <>

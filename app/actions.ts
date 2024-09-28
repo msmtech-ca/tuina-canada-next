@@ -8,6 +8,7 @@ import { addUserSchema, caseSchema, changeCaseStatusSchema, changeRegistrationSt
 import { render } from '@react-email/components'
 import { redirect } from "next/navigation"
 import { unhookedTranslation } from "./_components/i18n"
+import { fallbackLng } from "./_components/i18n/settings"
 
 export async function handleContactFormSubmit(prevState: any, formData: FormData) {
 
@@ -27,7 +28,7 @@ export async function handleContactFormSubmit(prevState: any, formData: FormData
     if (!validatedFields.success) {
 
         const errors = validatedFields.error.flatten().fieldErrors
-        const lng = formData.get('lng') as string || 'en'
+        const lng = formData.get('lng') as string || fallbackLng
         const { t } = await unhookedTranslation(lng, 'pages/contact')
 
         const translatedErrors = errors;
@@ -88,15 +89,27 @@ export async function handleLoginInitiate(prevState: any, formData: FormData) {
     // Return early if the form data is invalid
     if (!validatedFields.success) {
 
+        const errors = validatedFields.error.flatten().fieldErrors
+        const lng = formData.get('lng') as string || fallbackLng
+        const { t } = await unhookedTranslation(lng, 'members/login')
+
+        const translatedErrors = errors;
+        for (const [field, fieldErrors] of Object.entries(errors)) {
+            if (fieldErrors) {
+                translatedErrors[field as keyof typeof errors] = fieldErrors.map((errorKey) => t(`sections.LoginForm.${errorKey}`));
+            }
+        }
+
         const response = {
             result: null,
-            errors: validatedFields.error.flatten().fieldErrors,
+            errors: translatedErrors,
         }
 
         console.info('handleLoginInitiate action form is invalid', {
             formData: formData,
             result: response.result,
             errors: response.errors,
+            translatedErrors: translatedErrors,
         })
 
         return response
@@ -555,7 +568,7 @@ export async function handleAddRegistration(prevState: any, formData: FormData) 
     if (!validatedFields.success) {
 
         const errors = validatedFields.error.flatten().fieldErrors
-        const lng = formData.get('lng') as string || 'en'
+        const lng = formData.get('lng') as string || fallbackLng
         const { t } = await unhookedTranslation(lng, 'members/register')
 
         const translatedErrors = errors;

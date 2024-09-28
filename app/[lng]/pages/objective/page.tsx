@@ -47,6 +47,7 @@ export default async function Page({ params }: { params: { lng: string } }) {
                     <Button
                         to={`/members/register`}
                         variant={`dark`}
+                        lng={params.lng}
                     >
                         {t('become_member_today')}
                     </Button>

@@ -16,5 +16,8 @@
         "terms_conditions": "Terms & Conditions",
         "copy": "© 2024 Canadian Tui Na Association. ",
         "web_solution": "Web solution by MSM TECHNOLOGIES"
+    },
+    "Button": {
+        "loading": "Please wait..."
     }
 }

@@ -27,7 +27,12 @@ export default async function Home({ params }: { params: { lng: string } }) {
                         <h2 className={`mt-8 text-neutral-50 text-xl md:text-2xl leading-tight xl:w-1/2 font-medium`}>
                             {t('provide_resources')}
                         </h2>
-                        <Button to={`/members/register`} className={`mt-8`} variant={`dark`}>
+                        <Button
+                            to={`/members/register`}
+                            className={`mt-8`}
+                            variant={`dark`}
+                            lng={params.lng}
+                        >
                             {t('become_member_today')}
                         </Button>
                     </div>
@@ -65,7 +70,12 @@ export default async function Home({ params }: { params: { lng: string } }) {
                                     </li>
                                 ))}
                             </ul>
-                            <Button to={`/members/register`} className={`mt-8`} variant={`dark`}>
+                            <Button
+                                to={`/members/register`}
+                                className={`mt-8`}
+                                variant={`dark`}
+                                lng={params.lng}
+                            >
                                 {t('become_member_today')}
                             </Button>
                         </div>
@@ -103,7 +113,11 @@ export default async function Home({ params }: { params: { lng: string } }) {
                         )}
                     </div>
                     <div className={`mt-16 w-full flex justify-center items-center`}>
-                        <Button to={`/members/register`} variant={`light`}>
+                        <Button
+                            to={`/members/register`}
+                            variant={`light`}
+                            lng={params.lng}
+                        >
                             {t('become_member_today')}
                         </Button>
                     </div>
@@ -157,7 +171,11 @@ export default async function Home({ params }: { params: { lng: string } }) {
                         />
                     </div>
                     <div className={`mt-4 w-full flex justify-center items-center`}>
-                        <Button to={`/members/register`} variant={`dark`}>
+                        <Button
+                            to={`/members/register`}
+                            variant={`dark`}
+                            lng={params.lng}
+                        >
                             {t('become_member_today')}
                         </Button>
                     </div>
@@ -179,7 +197,11 @@ export default async function Home({ params }: { params: { lng: string } }) {
                         )}
                     </div>
                     <div className={`mt-12 w-full flex justify-center items-center`}>
-                        <Button to={`/members/register`} variant={`dark`}>
+                        <Button
+                            to={`/members/register`}
+                            variant={`dark`}
+                            lng={params.lng}
+                        >
                             {t('become_member_today')}
                         </Button>
                     </div>
@@ -197,7 +219,12 @@ export default async function Home({ params }: { params: { lng: string } }) {
                                     {paragraph}
                                 </p>
                             ))}
-                            <Button to={`/members/register`} className={`mt-8`} variant={`dark`}>
+                            <Button
+                                to={`/members/register`}
+                                className={`mt-8`}
+                                variant={`dark`}
+                                lng={params.lng}
+                            >
                                 {t('become_member_today')}
                             </Button>
                         </div>

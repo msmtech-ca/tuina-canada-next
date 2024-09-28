@@ -10,26 +10,32 @@ import Input from '@/app/_components/Input'
 
 const initialState = loginInitiateSchema._output
 
-export default function LoginForm() {
+interface LoginFormProps {
+    lng: string;
+    t: { [key:string]: any }
+}
+
+export default function LoginForm({ lng, t }: LoginFormProps) {
 
     const [state, formAction] = useFormState(handleLoginInitiate, initialState)
 
     return state?.result?.success === true ? (
         <div className={`h-full flex flex-col gap-4 items-center justify-center text-center p-12 bg-primary-100 rounded-xl mt-8`}>
-            <h2 className={`font-serif text-3xl leading-none font-bold`}>Check your email.</h2>
-            <p className={`mt-4`}>We sent an email to <b>{state?.result?.email}</b> with instructions to log in.</p>
+            <h2 className={`font-serif text-3xl leading-none font-bold`}>{t.LoginForm.success.title}</h2>
+            <p className={`mt-4`} dangerouslySetInnerHTML={{__html: t.LoginForm.success.message.replace('{{email}}', state?.result?.email)}}></p>
         </div>
     ) : (
         <>
-            <p className={`mt-8`}>If you are a member of the association, we will send instructions to your email for logging in.</p>
+            <p className={`mt-8`}>{t.LoginForm.prompt}</p>
             <div className={`mt-4`}>
                 <form
                     action={formAction}
                 >
+                    <input name={`lng`} hidden value={lng} readOnly />
                     <div className={`flex flex-col gap-4`}>
                         <div>
                             <Input
-                                labelName={`Email`}
+                                labelName={t.LoginForm.form.email.label}
                                 name={`email`}
                                 error={state?.errors?.email}
                                 type={`email`}
@@ -37,14 +43,17 @@ export default function LoginForm() {
                             />
                         </div>
                     </div>
-                    <LoginButton />
+                    <LoginButton
+                        lng={lng}
+                        sendMessageText={t.LoginForm.form.submit}
+                    />
                 </form>
             </div>
         </>
     )
 }
 
-function LoginButton() {
+function LoginButton({ lng, sendMessageText }: { lng: string; sendMessageText: string }) {
 
     const { pending } = useFormStatus()
 
@@ -53,6 +62,7 @@ function LoginButton() {
             className={`mt-4`}
             variant={`dark`}
             loading={pending}
-        >Login</Button>
+            lng={lng}
+        >{sendMessageText}</Button>
     )
 }
