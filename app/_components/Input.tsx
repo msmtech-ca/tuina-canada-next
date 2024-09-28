@@ -33,7 +33,7 @@ export default function Input({ name, labelName, type='text', error, required=fa
                     <div className={`text-red-500 peer text-sm`}>{Array.isArray(error) ? error?.join(' | ') : error}</div>
                 )}
                 <input
-                    className={clsx([`w-full bg-transparent rounded-md border px-2 py-2 shadow-sm text-base mt-1 read-only:text-neutral-300 read-only:border-neutral-300 disabled:text-neutral-300 disabled:border-neutral-300`, error ? `border-red-500` : `border-neutral-500`])}
+                    className={clsx([`w-full bg-transparent rounded-md border px-2 py-1 lg:py-2 shadow-sm text-base mt-1 read-only:text-neutral-300 read-only:border-neutral-300 disabled:text-neutral-300 disabled:border-neutral-300`, error ? `border-red-500` : `border-neutral-500`])}
                     type={type}
                     id={id}
                     name={name}

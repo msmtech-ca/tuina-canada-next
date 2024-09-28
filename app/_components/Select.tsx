@@ -35,7 +35,7 @@ export default function Select({ name, labelName, labelHidden=false, error, requ
                     <div className={`text-red-500 peer text-sm`}>{Array.isArray(error) ? error?.join(' | ') : error}</div>
                 )}
                 <select
-                    className={clsx([`w-full bg-transparent rounded-md border px-2 py-1.5 shadow-sm text-base disabled:text-neutral-300 disabled:border-neutral-300`, error ? `border-red-500` : `border-neutral-500`, labelHidden ? `` : `mt-1`])}
+                    className={clsx([`w-full bg-transparent rounded-md border px-2 py-0.5 lg:py-1.5 shadow-sm text-base disabled:text-neutral-300 disabled:border-neutral-300`, error ? `border-red-500` : `border-neutral-500`, labelHidden ? `` : `mt-1`])}
                     id={id}
                     name={name}
                     required={required}

@@ -5,6 +5,7 @@ import '@/app//globals.css'
 import Link from 'next/link'
 import { useTranslation } from '@/app/_components/i18n'
 import LangSelector from '../_components/LangSelector'
+import MobileMenu from '../_components/MobileMenu'
 
 const gentium = Gentium_Book_Plus({
     subsets: ['latin'],
@@ -55,58 +56,68 @@ export default async function RootLayout({
                                 height={128}
                                 width={600}
                                 alt={t('association_name')}
-                                className={`h-16 xl:h-20 w-auto`}
+                                className={`h-12 md:h-16 xl:h-20 w-auto`}
                             />
                         </Link>
-                        <ul className={`flex items-center gap-8 text-lg`}>
-                            <li>
-                                <Link
-                                    href={`/${lng}/pages/objective`}
-                                >
-                                    {t('navigation.objective')}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href={`/${lng}/pages/training`}
-                                >
-                                    {t('navigation.training')}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href={`/${lng}/pages/advantages`}
-                                >
-                                    {t('navigation.advantages')}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href={`/${lng}/pages/insurance`}
-                                >
-                                    {t('navigation.insurance')}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href={`/${lng}/pages/contact`}
-                                >
-                                    {t('navigation.contact')}
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href={`/${lng}/members/home/dashboard`}
-                                >
-                                    {t('navigation.members')}
-                                </Link>
-                            </li>
-                            <li>
+                        <div className={`flex items-center gap-4 lg:gap-8`}>
+                            <ul className={`hidden lg:flex items-center gap-4 xl:gap-8 text-lg`}>
+                                <li>
+                                    <Link
+                                        href={`/${lng}/pages/objective`}
+                                    >
+                                        {t('navigation.objective')}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href={`/${lng}/pages/training`}
+                                    >
+                                        {t('navigation.training')}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href={`/${lng}/pages/advantages`}
+                                    >
+                                        {t('navigation.advantages')}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href={`/${lng}/pages/insurance`}
+                                    >
+                                        {t('navigation.insurance')}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href={`/${lng}/pages/contact`}
+                                    >
+                                        {t('navigation.contact')}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href={`/${lng}/members/home/dashboard`}
+                                    >
+                                        {t('navigation.members')}
+                                    </Link>
+                                </li>
+                            </ul>
+                            <div>
                                 <LangSelector
                                     lng={lng}
                                 />
-                            </li>
-                        </ul>
+                            </div>
+                            <div>
+                                <MobileMenu
+                                    lng={lng}
+                                    t={{
+                                        navigation: t('navigation', { returnObjects: true }),
+                                    }}
+                                />
+                            </div>
+                        </div>
                     </nav>
                 </header>
                 <main className="relative min-h-screen flex flex-col w-full items-stretch">
@@ -114,7 +125,7 @@ export default async function RootLayout({
                 </main>
                 <footer className={`pt-24 bg-neutral-900 text-neutral-50`}>
                     <div className={`container mx-auto`}>
-                        <div className={`grid grid-cols-2`}>
+                        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8`}>
                             <div>
                                 <Link
                                     href={`/`}
@@ -204,12 +215,12 @@ export default async function RootLayout({
                                 </div>
                             </div>
                         </div>
-                        <div className={`mt-24 px-2 py-8 border-t border-neutral-600 flex justify-between`}>
-                            <div className={`text-sm`}>
-                                {t('footer.copy')}
+                        <div className={`mt-24 px-2 pt-4 pb-4 lg:py-4 border-t border-neutral-600 flex flex-col-reverse lg:flex-row justify-between gap-8`}>
+                            <div className={`text-xs lg:text-sm block leading-none`}>
+                                <span>{t('footer.copy')}</span>
                                 <Link href={`https://msmtech.ca/${lng}`}>{t('footer.web_solution')}</Link>
                             </div>
-                            <div className={`flex gap-8 text-sm`}>
+                            <div className={`flex gap-8 lg:gap-8 text-sm justify-end leading-none`}>
                                 <Link
                                     href={`/${lng}/pages/privacy-policy`}
                                 >

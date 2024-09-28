@@ -16,15 +16,15 @@ export default async function Home({ params }: { params: { lng: string } }) {
                     width={1600}
                     height={900}
                     alt={t('main_splash_alt')}
-                    className={`h-[calc(100vh_-_5rem)] w-full object-cover`}
+                    className={`min-h-[calc(100vh_-_5rem)] w-full object-cover`}
                 />
                 <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-neutral-950/40 from-0% via-40% to-100% to-transparent`}></div>
                 <div className={`absolute top-1/2 -translate-y-1/2 w-full`}>
                     <div className={`container mx-auto`}>
-                        <h1 className={`font-serif text-neutral-50 text-7xl leading-none w-3/5 font-bold`}>
+                        <h1 className={`font-serif text-neutral-50 text-6xl md:text-7xl leading-none w-full xl:w-3/5 font-bold`}>
                             {t('empowering_members')}
                         </h1>
-                        <h2 className={`mt-8 text-neutral-50 text-2xl leading-tight w-1/2 font-medium`}>
+                        <h2 className={`mt-8 text-neutral-50 text-xl md:text-2xl leading-tight xl:w-1/2 font-medium`}>
                             {t('provide_resources')}
                         </h2>
                         <Button to={`/members/register`} className={`mt-8`} variant={`dark`}>
@@ -36,7 +36,7 @@ export default async function Home({ params }: { params: { lng: string } }) {
 
             {/* Features Section */}
             <div className={`bg-neutral-700 text-neutral-50 py-12`}>
-                <div className={`container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-24 items-center`}>
+                <div className={`container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-24 items-center`}>
                     <div className={`text-2xl font-bold text-center`}>{t('gain_credibility')}</div>
                     <div className={`text-2xl font-bold text-center`}>{t('receive_support')}</div>
                     <div className={`text-2xl font-bold text-center`}>{t('ensure_reimbursement')}</div>

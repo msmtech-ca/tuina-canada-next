@@ -41,13 +41,12 @@ export default function RegistrationsForm({ lng, t, options }: RegistrationsForm
     ) : (
         <form action={formAction}>
             <input name={`lng`} hidden value={lng} readOnly />
-            <div dangerouslySetInnerHTML={{__html: t.RegistrationsForm.form.required_fields_note}}>
-            </div>
+            <div dangerouslySetInnerHTML={{__html: t.RegistrationsForm.form.required_fields_note}}></div>
             <div className={`mt-4 flex flex-col gap-4`}>
                 <div>
                     <h2 className={`text-2xl leading-none font-bold mb-4`}>{t.RegistrationsForm.form.personal_information}</h2>
                     <div className={`grid grid-cols-12 gap-4`}>
-                        <div className={`col-span-3`}>
+                        <div className={`col-span-6 lg:col-span-3`}>
                             <Select
                                 labelName={t.RegistrationsForm.form.title.label}
                                 name={`title`}
@@ -57,7 +56,7 @@ export default function RegistrationsForm({ lng, t, options }: RegistrationsForm
                                 defaultValue={initialState?.title ?? undefined}
                             />
                         </div>
-                        <div className={`col-span-3`}>
+                        <div className={`col-span-6 lg:col-span-3`}>
                             <Input
                                 labelName={t.RegistrationsForm.form.first_name.label}
                                 name={`firstName`}
@@ -67,7 +66,7 @@ export default function RegistrationsForm({ lng, t, options }: RegistrationsForm
                                 defaultValue={initialState?.firstName ?? undefined}
                             />
                         </div>
-                        <div className={`col-span-3`}>
+                        <div className={`col-span-6 lg:col-span-3`}>
                             <Input
                                 labelName={t.RegistrationsForm.form.middle_name.label}
                                 name={`middleName`}
@@ -76,7 +75,7 @@ export default function RegistrationsForm({ lng, t, options }: RegistrationsForm
                                 defaultValue={initialState?.middleName ?? undefined}
                             />
                         </div>
-                        <div className={`col-span-3`}>
+                        <div className={`col-span-6 lg:col-span-3`}>
                             <Input
                                 labelName={t.RegistrationsForm.form.last_name.label}
                                 name={`lastName`}
@@ -156,7 +155,7 @@ export default function RegistrationsForm({ lng, t, options }: RegistrationsForm
                         </div>
                     </div>
                     <div className={`grid grid-cols-12 gap-4`}>
-                        <div className={`col-span-3`}>
+                        <div className={`col-span-6 lg:col-span-3`}>
                             <Input
                                 labelName={t.RegistrationsForm.form.city.label}
                                 name={`city`}
@@ -166,7 +165,7 @@ export default function RegistrationsForm({ lng, t, options }: RegistrationsForm
                                 defaultValue={initialState?.city ?? undefined}
                             />
                         </div>
-                        <div className={`col-span-3`}>
+                        <div className={`col-span-6 lg:col-span-3`}>
                             <Select
                                 labelName={t.RegistrationsForm.form.province.label}
                                 name={`province`}
@@ -176,7 +175,7 @@ export default function RegistrationsForm({ lng, t, options }: RegistrationsForm
                                 defaultValue={initialState?.province ?? undefined}
                             />
                         </div>
-                        <div className={`col-span-3`}>
+                        <div className={`col-span-6 lg:col-span-3`}>
                             <Input
                                 labelName={t.RegistrationsForm.form.zip.label}
                                 name={`zip`}
@@ -186,7 +185,7 @@ export default function RegistrationsForm({ lng, t, options }: RegistrationsForm
                                 defaultValue={initialState?.zip ?? undefined}
                             />
                         </div>
-                        <div className={`col-span-3`}>
+                        <div className={`col-span-6 lg:col-span-3`}>
                             <Select
                                 labelName={t.RegistrationsForm.form.country.label}
                                 name={`country`}

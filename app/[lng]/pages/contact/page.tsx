@@ -8,7 +8,7 @@ export default async function Page({ params }: { params: { lng: string } }) {
     return (
         <div className={`py-12 container mx-auto`}>
             <h1 className={`mt-8 font-serif text-5xl leading-none font-bold text-center`}>{t('contact')}</h1>
-            <div className={`mt-8 grid grid-cols-2 gap-12`}>
+            <div className={`mt-8 grid grid-cols-1 lg:grid-cols-2 gap-12`}>
                 <div>
                     <h3 className={`mt-8 font-serif text-xl leading-none font-bold`}>{t('office_address')}</h3>
                     <p className={`mt-4`}>
