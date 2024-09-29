@@ -216,11 +216,11 @@ export default async function RootLayout({
                             </div>
                         </div>
                         <div className={`mt-24 px-2 pt-4 pb-4 lg:py-4 border-t border-neutral-600 flex flex-col-reverse lg:flex-row justify-between gap-8`}>
-                            <div className={`text-xs lg:text-sm block leading-none`}>
+                            <div className={`text-xs md:text-sm flex flex-col md:block leading-none`}>
                                 <span>{t('footer.copy')}</span>
                                 <Link href={`https://msmtech.ca/${lng}`}>{t('footer.web_solution')}</Link>
                             </div>
-                            <div className={`flex gap-8 lg:gap-8 text-sm justify-end leading-none`}>
+                            <div className={`flex gap-4 lg:gap-8 text-sm justify-start leading-none`}>
                                 <Link
                                     href={`/${lng}/pages/privacy-policy`}
                                 >

@@ -50,7 +50,7 @@ export default async function Home({ params }: { params: { lng: string } }) {
 
             {/* Challenges Section */}
             <div className={`py-24`}>
-                <div className={`container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8`}>
+                <div className={`container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8`}>
                     <div className={`aspect-square overflow-hidden rounded-2xl shadow`}>
                         <Image
                             src={`/pexels-anntarazevich-5196821.jpg`}
@@ -133,41 +133,41 @@ export default async function Home({ params }: { params: { lng: string } }) {
                         <p className={`text-center text-xl font-medium`}>{t('testimonial.quote')}</p>
                     </div>
                     <p className={`mt-4 text-center text-xl font-bold`}>{t('testimonial.author')}</p>
-                    <div className={`mt-4 flex flex-wrap gap-8 justify-center items-center`}>
+                    <div className={`mt-4 flex flex-wrap gap-4 xl:gap-8 justify-center items-center`}>
                         <Image
                             src={`/logo-intact.svg`}
                             width={160}
                             height={160}
                             alt={`logo-insurance`}
-                            className={`h-32 w-auto object-cover`}
+                            className={`h-24 xl:h-32 w-auto object-cover`}
                         />
                         <Image
                             src={`/logo-beneva.svg`}
                             width={160}
                             height={160}
                             alt={`logo-insurance`}
-                            className={`h-16 w-auto object-cover`}
+                            className={`h-12 xl:h-16 w-auto object-cover`}
                         />
                         <Image
                             src={`/logo-canada-life.svg`}
                             width={160}
                             height={160}
                             alt={`logo-insurance`}
-                            className={`h-12 w-auto object-cover`}
+                            className={`h-8 xl:h-12 w-auto object-cover`}
                         />
                         <Image
                             src={`/logo-manulife.svg`}
                             width={160}
                             height={160}
                             alt={`logo-insurance`}
-                            className={`h-8 w-auto object-cover`}
+                            className={`h-6 xl:h-8 w-auto object-cover`}
                         />
                         <Image
                             src={`/logo-sunlife.svg`}
                             width={160}
                             height={160}
                             alt={`logo-insurance`}
-                            className={`h-32 w-auto object-cover`}
+                            className={`h-24 xl:h-32 w-auto object-cover`}
                         />
                     </div>
                     <div className={`mt-4 w-full flex justify-center items-center`}>
@@ -210,8 +210,8 @@ export default async function Home({ params }: { params: { lng: string } }) {
 
             {/* Our Objective Section */}
             <div className={`py-24 bg-neutral-100`}>
-                <div className={`container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8`}>
-                    <div className={`flex justify-center items-center`}>
+                <div className={`container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8`}>
+                    <div className={`flex justify-center items-center order-2 lg:order-1`}>
                         <div className={`container`}>
                             <h2 className={`text-5xl font-serif font-bold`}>{t('our_objective')}</h2>
                             {t<'paragraphs', { returnObjects: true }, string[]>('paragraphs', { returnObjects: true }).map((paragraph: string, index: number) => (
@@ -229,7 +229,7 @@ export default async function Home({ params }: { params: { lng: string } }) {
                             </Button>
                         </div>
                     </div>
-                    <div className={`aspect-square overflow-hidden rounded-2xl shadow`}>
+                    <div className={`aspect-square overflow-hidden rounded-2xl shadow order-1 lg:order-2`}>
                         <Image
                             src={`/amy-hirschi-K0c8ko3e6AA-unsplash.jpg`}
                             width={1600}
