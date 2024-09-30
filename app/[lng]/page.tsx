@@ -129,11 +129,11 @@ export default async function Home({ params }: { params: { lng: string } }) {
                 <div className={`container mx-auto`}>
                     <h2 className={`text-6xl font-serif font-bold text-center`}>{t('weve_helped')}</h2>
                     <p className={`mt-2 text-center`}>{t('members_success')}</p>
-                    <div className={`mt-8 max-w-screen-sm mx-auto overflow-hidden rounded-2xl bg-neutral-200 p-8`}>
+                    {/* <div className={`mt-8 max-w-screen-sm mx-auto overflow-hidden rounded-2xl bg-neutral-200 p-8`}>
                         <p className={`text-center text-xl font-medium`}>{t('testimonial.quote')}</p>
                     </div>
-                    <p className={`mt-4 text-center text-xl font-bold`}>{t('testimonial.author')}</p>
-                    <div className={`mt-4 flex flex-wrap gap-4 xl:gap-8 justify-center items-center`}>
+                    <p className={`mt-4 text-center text-xl font-bold`}>{t('testimonial.author')}</p> */}
+                    <div className={`mt-4 flex flex-wrap gap-y-0 gap-x-4 xl:gap-8 justify-center items-center`}>
                         <Image
                             src={`/logo-intact.svg`}
                             width={160}
