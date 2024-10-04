@@ -1,6 +1,30 @@
 import Button from '@/app/_components/Button'
 import Image from 'next/image'
-import { useTranslation } from '@/app/_components/i18n'
+import { unhookedTranslation, useTranslation } from '@/app/_components/i18n'
+import { fallbackLng } from '@/app/_components/i18n/settings'
+import { GenerateMetaDataProps } from '@/src/types'
+import { languages } from '@/app/_components/i18n/settings'
+import { ResolvingMetadata, Metadata } from 'next'
+
+export async function generateMetadata({ params, searchParams }: GenerateMetaDataProps, parent: ResolvingMetadata): Promise<Metadata> {
+
+    // read route params
+    const handle = 'objective'
+    const lng = params.lng
+    const { t } = await unhookedTranslation(lng, `pages/${handle}`)
+    const alternatePages: {[key: string]: any} = {}
+    for (const lang of languages) {
+        alternatePages[`${lang}` as string] = `/${lang}/pages/${handle}`
+    }
+
+    return {
+        title: t('meta.title'),
+        alternates: {
+            canonical: `/${fallbackLng}/pages/${handle}`,
+            languages: alternatePages,
+        }
+    }
+}
 
 export default async function Page({ params }: { params: { lng: string } }) {
     const { t } = await useTranslation(params.lng, 'pages/objective')

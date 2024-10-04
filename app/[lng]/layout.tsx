@@ -1,11 +1,52 @@
-import type { Metadata } from 'next'
+import type { Metadata, ResolvingMetadata } from 'next'
 import { Mukta, Gentium_Book_Plus } from 'next/font/google'
 import Image from 'next/image'
 import '@/app//globals.css'
 import Link from 'next/link'
-import { useTranslation } from '@/app/_components/i18n'
+import { unhookedTranslation, useTranslation } from '@/app/_components/i18n'
 import LangSelector from '../_components/LangSelector'
 import MobileMenu from '../_components/MobileMenu'
+import { languages } from '../_components/i18n/settings'
+import { GenerateMetaDataProps } from '@/src/types'
+import Analytics from '../_components/Analytics'
+
+export async function generateStaticParams() {
+    return languages.map((lng) => ({ lng }))
+}
+
+// Generate metadata for SEO
+export async function generateMetadata(
+    { params, searchParams }: GenerateMetaDataProps,
+        parent: ResolvingMetadata
+    ): Promise<Metadata> {
+
+    // read route params
+    const lng = params.lng
+    const { t } = await unhookedTranslation(lng, 'global')
+
+    return {
+        title: {
+            template: `%s | ${t('meta.title')}`,
+            default: t('meta.title'),
+        },
+        description: t('meta.description'),
+        metadataBase: new URL(process.env.NEXT_PUBLIC_HOST || ''),
+        applicationName: t('meta.application_name'),
+        authors: [
+            {
+                name: 'MSM Technologies',
+                url: 'https://msmtech.ca',
+            },
+        ],
+        alternates: {
+            canonical: '/en',
+            languages: {
+                'en': '/en',
+                'fr': '/fr',
+            },
+        }
+    }
+}
 
 const gentium = Gentium_Book_Plus({
     subsets: ['latin'],
@@ -236,6 +277,9 @@ export default async function RootLayout({
                     </div>
                 </footer>
             </body>
+            <Analytics
+                measurementId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}
+            />
         </html>
     )
 }

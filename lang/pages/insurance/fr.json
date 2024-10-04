@@ -1,4 +1,7 @@
 {
+    "meta": {
+        "title": "Assurance"
+    },
     "insurance": "Assurance",
     "verify_membership_status": "Vérifier le statut d'adhésion",
     "paragraph1": "Si vous travaillez avec une compagnie d'assurance, vous pouvez facilement vérifier si un membre est actif en effectuant une recherche ci-dessous en utilisant son numéro d'adhésion.",

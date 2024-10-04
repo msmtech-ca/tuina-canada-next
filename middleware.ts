@@ -57,6 +57,6 @@ export const config = {
      * 4. /_vercel (Vercel internals)
      * 5. Static files (e.g. /favicon.ico, /sitemap.xml, /robots.txt, etc.)
      */
-    matcher: ['/((?!api|_next|_next/static|_next/image|assets|favicon.ico|sw.js|.*\.svg).*)']
-    // matcher: ['/((?!api/|_next/|_static|_vercel|[\\w-]+\\.\\w+).*)'],
+    // matcher: ['/((?!api|_next|_next/static|_next/image|assets|favicon.ico|sw.js|.*\.svg).*)']
+    matcher: ['/((?!api/|_next/|_static|_vercel|[\\w-]+\\.\\w+).*)'],
 };

@@ -1,4 +1,9 @@
 {
+    "meta": {
+        "application_name": "Association de Tui Na du Canada",
+        "title": "Association de Tui Na du Canada",
+        "description": "Notre mission est de donner aux massothérapeutes comme vous les moyens d'établir une entreprise prospère."
+    },
     "association_name": "Association de Tui Na du Canada",
     "navigation": {
         "objective": "Objectif",

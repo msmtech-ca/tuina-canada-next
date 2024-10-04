@@ -1,5 +1,10 @@
 {
-    "association_name": "Association de Tui Na du Canada",
+    "meta": {
+        "application_name": "Canadian Tui Na Association",
+        "title": "Canadian Tui Na Association",
+        "description": "Our mission is to empower massage therapists like you to establish a thriving business."
+    },
+    "association_name": "Canadian Tui Na Association",
     "navigation": {
         "objective": "Objective",
         "training": "Training",

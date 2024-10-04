@@ -1,4 +1,7 @@
 {
+    "meta": {
+        "title": "Insurance"
+    },
     "insurance": "Insurance",
     "verify_membership_status": "Verify Membership Status",
     "paragraph1": "If you work with an insurance company, you can easily verify if a member is active by searching below using their membership number.",

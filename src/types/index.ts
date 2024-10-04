@@ -11,3 +11,8 @@ export interface Auth {
         include: { role: true }
     }>;
 }
+
+export interface GenerateMetaDataProps {
+    params: { lng: string }
+    searchParams: { [key: string]: string | string[] | undefined }
+}
