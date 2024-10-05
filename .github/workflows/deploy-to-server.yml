@@ -58,8 +58,7 @@ jobs:
           local_dir: "./"
           remote_dir: "/var/www/tuinaducanada-next"
         run: |
-          # Exclude the SQLite database and WAL mode files from rsync
-          rsync -azvr --delete
-          ${local_dir} ${remote_user}@${remote_host}:${remote_dir}
+          # Empty deployment folder with rsync
+          rsync -azvr --delete ${local_dir} ${remote_user}@${remote_host}:${remote_dir}
           # Run Prisma migrations
           ssh ${remote_user}@${remote_host} "cd ${remote_dir} && pm2 stop tuinaducanada-next && npx prisma migrate deploy && pm2 start tuinaducanada-next"
