@@ -29,3 +29,12 @@ packages:
   - mariadb-server
   - ufw
   - redis
+  - curl
+
+### Missing steps:
+# curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash - 
+# sudo apt-get install -y nodejs
+# npm install pm2 -g
+# Configure Apache VHOST
+# Configure MYSQL DB and USER
+# Add a second deploy user
