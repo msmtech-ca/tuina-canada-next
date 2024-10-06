@@ -1,7 +1,7 @@
 import Select from '@/app/_components/Select';
-import AcceptRegistrationStatusButton from '@/app/members/_components/AcceptRegistrationStatusButton';
-import DeleteRegistrationButton from "@/app/members/_components/DeleteRegistrationButton"
-import RejectRegistrationStatusButton from '@/app/members/_components/RejectRegistrationStatusButton';
+import AcceptRegistrationStatusButton from '@/app/[lng]/members/_components/AcceptRegistrationStatusButton';
+import DeleteRegistrationButton from "@/app/[lng]/members/_components/DeleteRegistrationButton"
+import RejectRegistrationStatusButton from '@/app/[lng]/members/_components/RejectRegistrationStatusButton';
 import prisma from "@/src/database"
 import Link from "next/link"
 

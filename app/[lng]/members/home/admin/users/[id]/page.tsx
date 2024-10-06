@@ -1,11 +1,16 @@
 import { handleEditUserSubmit } from "@/app/actions"
-import DeleteUserButton from "@/app/members/_components/DeleteUserButton"
-import UsersForm from "@/app/members/_components/UsersForm"
+import DeleteUserButton from "@/app/[lng]/members/_components/DeleteUserButton"
+import UsersForm from "@/app/[lng]/members/_components/UsersForm"
 import prisma from "@/src/database"
 import { toInputDate } from "@/src/lib/utils"
 import Link from "next/link"
+import { titles, sexes, provinces, countries } from "@/src/lib/constants"
+import { fallbackLng } from "@/app/_components/i18n/settings"
+import { useTranslation } from "@/app/_components/i18n"
 
 export default async function Page({ params }: { params: { id: string } }) {
+
+    const { t } = await useTranslation(fallbackLng, 'members/register')
 
     const userData = await prisma.user.findFirst({
         where: {
@@ -26,6 +31,26 @@ export default async function Page({ params }: { params: { id: string } }) {
         }
     })
 
+    const mappedTitles = titles.map(value => ({
+        value,
+        label: t(`sections.RegistrationsForm.form.titles.${value}`),
+    }))
+
+    const mappedSexes = sexes.map(value => ({
+        value,
+        label: t(`sections.RegistrationsForm.form.sexes.${value}`),
+    }))
+
+    const mappedProvinces = provinces.map(value => ({
+        value,
+        label: t(`sections.RegistrationsForm.form.provinces.${value}`),
+    }))
+
+    const mappedCountries = countries.map(value => ({
+        value,
+        label: t(`sections.RegistrationsForm.form.countries.${value}`),
+    }))
+
 
     return (
         <div>
@@ -45,6 +70,12 @@ export default async function Page({ params }: { params: { id: string } }) {
                     action={handleEditUserSubmit}
                     plans={plans}
                     submitText={`Save changes`}
+                    options={{
+                        titles: mappedTitles,
+                        sexes: mappedSexes,
+                        provinces: mappedProvinces,
+                        countries: mappedCountries,
+                    }}
                 />
             </div>
         </div>

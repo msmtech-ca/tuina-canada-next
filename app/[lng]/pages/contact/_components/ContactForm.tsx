@@ -20,6 +20,7 @@ interface ContactFormProps {
 
 export default function ContactForm({ lng, t }: ContactFormProps) {
 
+    //@ts-ignore
     const [state, formAction] = useFormState(handleContactFormSubmit, initialState)
 
     const translations = t.ContactForm

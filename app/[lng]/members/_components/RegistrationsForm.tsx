@@ -23,6 +23,8 @@ interface RegistrationsFormProps {
 }
 
 export default function RegistrationsForm({ lng, t, options }: RegistrationsFormProps) {
+
+    //@ts-ignore
     const [state, formAction] = useFormState(handleAddRegistration, initialState)
 
     function SubmitButton() {

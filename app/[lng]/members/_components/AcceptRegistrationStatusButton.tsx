@@ -9,6 +9,7 @@ import { useFormState } from "react-dom";
 import toast from "react-hot-toast";
 
 export default function AcceptRegistrationStatusButton({ resourceId }: { resourceId: string; }) {
+    //@ts-ignore
     const [state, formAction] = useFormState(handleChangeRegistrationStatus, changeRegistrationStatusSchema._output)
     const router = useRouter()
 

@@ -17,6 +17,7 @@ interface LoginFormProps {
 
 export default function LoginForm({ lng, t }: LoginFormProps) {
 
+    //@ts-ignore
     const [state, formAction] = useFormState(handleLoginInitiate, initialState)
 
     return state?.result?.success === true ? (

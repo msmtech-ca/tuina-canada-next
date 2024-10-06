@@ -9,6 +9,7 @@ import { useFormState, useFormStatus } from "react-dom"
 import toast from "react-hot-toast";
 
 export default function ChangeCaseStatusButton({ resourceId, currentStatus }: { resourceId: string; currentStatus: CaseStatus }) {
+    //@ts-ignore
     const [state, formAction] = useFormState(handleChangeCaseStatus, changeCaseStatusSchema._output)
     const router = useRouter()
 

@@ -12,6 +12,7 @@ const initialState = {
 
 export default function DeleteUserButton({ resourceId }: { resourceId: string; }) {
 
+    //@ts-ignore
     const [state, formAction] = useFormState(handleDeleteUser, initialState)
     const router = useRouter()
 

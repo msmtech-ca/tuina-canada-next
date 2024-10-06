@@ -15,11 +15,18 @@ interface UsersFormProps {
     initialState?: typeof addUserSchema._output;
     plans: Plan[]
     submitText: string;
+    options: {
+        titles: { value: string; label: string }[]
+        sexes: { value: string; label: string }[]
+        provinces: { value: string; label: string }[]
+        countries: { value: string; label: string }[]
+    }
 }
 
-export default function UsersForm({ action, initialState=addUserSchema._output, plans, submitText }: UsersFormProps) {
+export default function UsersForm({ action, initialState=addUserSchema._output, plans, submitText, options }: UsersFormProps) {
 
     const router = useRouter()
+    //@ts-ignore
     const [state, formAction] = useFormState(action, initialState)
     type State = typeof state
 
@@ -61,7 +68,7 @@ export default function UsersForm({ action, initialState=addUserSchema._output, 
                                 labelName={`Title`}
                                 name={`title`}
                                 error={state?.errors?.title}
-                                options={titles}
+                                options={options.titles}
                                 required
                                 defaultValue={initialState?.title ?? undefined}
                             />
@@ -124,7 +131,7 @@ export default function UsersForm({ action, initialState=addUserSchema._output, 
                                 labelName={`Sex`}
                                 name={`sex`}
                                 error={state?.errors?.sex}
-                                options={sexes}
+                                options={options.sexes}
                                 required
                                 defaultValue={initialState?.sex ?? undefined}
                             />
@@ -191,7 +198,7 @@ export default function UsersForm({ action, initialState=addUserSchema._output, 
                                 labelName={`Province`}
                                 name={`province`}
                                 error={state?.errors?.province}
-                                options={provinces}
+                                options={options.provinces}
                                 required
                                 defaultValue={initialState?.province ?? undefined}
                             />
@@ -211,7 +218,7 @@ export default function UsersForm({ action, initialState=addUserSchema._output, 
                                 labelName={`Country`}
                                 name={`country`}
                                 error={state?.errors?.country}
-                                options={countries}
+                                options={options.countries}
                                 required
                                 defaultValue={initialState?.country ?? undefined}
                             />

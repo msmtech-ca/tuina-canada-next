@@ -12,6 +12,7 @@ const initialState = {
 
 export default function DeleteCaseButton({ resourceId }: { resourceId: string; }) {
 
+    //@ts-ignore
     const [state, formAction] = useFormState(handleDeleteCase, initialState)
     const router = useRouter()
 

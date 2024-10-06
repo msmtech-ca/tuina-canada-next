@@ -1,5 +1,5 @@
-import ChangeCaseStatusButton from "@/app/members/_components/ChangeCaseStatusButton"
-import DeleteCaseButton from "@/app/members/_components/DeleteCaseButton"
+import ChangeCaseStatusButton from "@/app/[lng]/members/_components/ChangeCaseStatusButton"
+import DeleteCaseButton from "@/app/[lng]/members/_components/DeleteCaseButton"
 import prisma from "@/src/database"
 import Link from "next/link"
 
@@ -36,7 +36,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                         <h3 className={`font-serif text-2xl leading-none font-bold`}>Case details</h3>
                         <p className={`mt-1 leading-tight`}>
                             <span className={`font-medium`}>Case status: </span>
-                            <span>{caseData?.status}</span>
+                            <span>{caseData?.status}</span> c 
                         </p>
                         <div className={`mt-4 pt-4 border-t border-t-neutral-400`}>
                             <div className={`font-bold`}>Subject</div>
