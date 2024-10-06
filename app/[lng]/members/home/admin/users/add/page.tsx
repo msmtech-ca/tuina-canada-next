@@ -6,6 +6,8 @@ import { titles, sexes, provinces, countries } from "@/src/lib/constants";
 import { useTranslation } from "@/app/_components/i18n";
 import { fallbackLng } from "@/app/_components/i18n/settings";
 
+export const dynamic = "force-dynamic";
+
 export default async function Page() {
 
     const plans = await prisma.plan.findMany({

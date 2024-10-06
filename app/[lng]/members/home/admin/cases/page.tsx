@@ -3,6 +3,8 @@ import DataTable from "@/app/[lng]/members/_components/DataTable"
 import prisma from "@/src/database"
 import { Case } from "@prisma/client"
 
+export const dynamic = "force-dynamic";
+
 export default async function Page() {
 
     const cases = await prisma.case.findMany({

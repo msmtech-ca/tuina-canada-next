@@ -8,6 +8,8 @@ import { titles, sexes, provinces, countries } from "@/src/lib/constants"
 import { fallbackLng } from "@/app/_components/i18n/settings"
 import { useTranslation } from "@/app/_components/i18n"
 
+export const dynamic = "force-dynamic";
+
 export default async function Page({ params }: { params: { id: string } }) {
 
     const { t } = await useTranslation(fallbackLng, 'members/register')
