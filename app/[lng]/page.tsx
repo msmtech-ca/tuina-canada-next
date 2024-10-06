@@ -45,7 +45,7 @@ export default async function Home({ params }: { params: { lng: string } }) {
                 <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-neutral-950/40 from-0% via-40% to-100% to-transparent`}></div>
                 <div className={`absolute top-1/2 -translate-y-1/2 w-full`}>
                     <div className={`container mx-auto`}>
-                        <h1 className={`font-serif text-neutral-50 text-6xl md:text-7xl leading-none w-full xl:w-3/5 font-bold`}>
+                        <h1 className={`font-serif text-neutral-50 text-5xl md:text-7xl leading-none w-full xl:w-3/5 font-bold`}>
                             {t('empowering_members')}
                         </h1>
                         <h2 className={`mt-8 text-neutral-50 text-xl md:text-2xl leading-tight xl:w-1/2 font-medium`}>
@@ -110,7 +110,7 @@ export default async function Home({ params }: { params: { lng: string } }) {
             {/* Benefits Section */}
             <div className={`py-24 bg-neutral-700`}>
                 <div className={`container mx-auto`}>
-                    <h2 className={`text-6xl font-serif font-bold text-neutral-50 text-center`}>
+                    <h2 className={`text-5xl md:text-7xl font-serif font-bold text-neutral-50 text-center`}>
                         {t('we_take_care')}
                     </h2>
                     <div className={`mt-16 grid grid-cols-1 md:grid-cols-3 gap-8`}>
@@ -151,7 +151,7 @@ export default async function Home({ params }: { params: { lng: string } }) {
             {/* Testimonials Section */}
             <div className={`py-24 bg-neutral-50`}>
                 <div className={`container mx-auto`}>
-                    <h2 className={`text-6xl font-serif font-bold text-center`}>{t('weve_helped')}</h2>
+                    <h2 className={`text-5xl md:text-7xl font-serif font-bold text-center`}>{t('weve_helped')}</h2>
                     <p className={`mt-2 text-center`}>{t('members_success')}</p>
                     {/* <div className={`mt-8 max-w-screen-sm mx-auto overflow-hidden rounded-2xl bg-neutral-200 p-8`}>
                         <p className={`text-center text-xl font-medium`}>{t('testimonial.quote')}</p>
@@ -209,7 +209,7 @@ export default async function Home({ params }: { params: { lng: string } }) {
             {/* How It Works Section */}
             <div className={`py-24 bg-neutral-50`}>
                 <div className={`container mx-auto`}>
-                    <h2 className={`text-6xl font-serif font-bold text-center`}>{t('how_it_works')}</h2>
+                    <h2 className={`text-5xl md:text-7xl font-serif font-bold text-center`}>{t('how_it_works')}</h2>
                     <div className={`mt-12 flex flex-col gap-12 justify-center items-start max-w-screen-sm mx-auto`}>
                         {t<'steps', { returnObjects: true }, { title: string; description: string }[]>('steps', { returnObjects: true }).map(
                             (step: { title: string; description: string }, index: number) => (

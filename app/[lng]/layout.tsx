@@ -87,7 +87,7 @@ export default async function RootLayout({
         <html lang={lng} className={`${mukta.variable} ${gentium.variable} antialiased`}>
             <body className={`bg-neutral-100 text-neutral-900 text-lg relative`}>
                 <header>
-                    <nav className={`flex justify-between items-center gap-4 px-4 py-2 shadow border-b border-neutral-600 z-10 relative`}>
+                    <nav className={`fixed flex justify-between items-center gap-4 px-4 py-2 shadow border-b border-neutral-600 z-10 lg:relative bg-neutral-50 top-0 left-0 right-0`}>
                         <Link
                             href={`/${lng}`}
                             className={`block`}
@@ -161,7 +161,7 @@ export default async function RootLayout({
                         </div>
                     </nav>
                 </header>
-                <main className="relative min-h-screen flex flex-col w-full items-stretch">
+                <main className="relative min-h-screen flex flex-col w-full items-stretch pt-12 lg:pt-0">
                     {children}
                 </main>
                 <footer className={`pt-24 bg-neutral-900 text-neutral-50`}>
@@ -177,7 +177,7 @@ export default async function RootLayout({
                                         height={128}
                                         width={600}
                                         alt={t('association_name')}
-                                        className={`h-20 w-auto`}
+                                        className={`h-20 w-auto object-contain`}
                                     />
                                 </Link>
                                 <p className={`mt-4 w-2/3`}>{t('mission_statement')}</p>

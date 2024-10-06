@@ -25,7 +25,7 @@ export default function MobileMenu({ lng, t }: MobileMenuProps) {
                     </div>
                 </div>
                 <div className={`flex w-full h-full items-center justify-center`}>
-                    <ul className={`flex flex-col items-center gap-8 text-4xl`}>
+                    <ul className={`flex flex-col items-center gap-4 text-2xl`}>
                         <li>
                             <Link
                                 href={`/${lng}/pages/objective`}

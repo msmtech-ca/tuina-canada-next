@@ -44,8 +44,8 @@ jobs:
         run: |
           npm ci
           unset CI
-          echo "${{ secrets.DEV_ENV_FILE }}" > .env.local
-          chmod 600 .env.local
+          echo "${{ secrets.DEV_ENV_FILE }}" > .env
+          chmod 600 .env
           npm run build
 
       - name: "Deploy to Server"
@@ -61,4 +61,4 @@ jobs:
           # Empty deployment folder with rsync
           rsync -azvr --delete ${local_dir} ${remote_user}@${remote_host}:${remote_dir}
           # Run Prisma migrations
-          ssh ${remote_user}@${remote_host} "cd ${remote_dir} && pm2 stop tuinaducanada-next && npx prisma migrate deploy && pm2 start tuinaducanada-next"
+          ssh ${remote_user}@${remote_host} "cd ${remote_dir} && pm2 stop tuinaducanada-next && npx prisma migrate deploy && pm2 start tuinaducanada-next --watch"
