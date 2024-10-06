@@ -46,7 +46,6 @@ jobs:
           unset CI
           echo "${{ secrets.DEV_ENV_FILE }}" > .env.local
           chmod 600 .env.local
-          npm audit fix
           npm run build
 
       - name: "Deploy to Server"
