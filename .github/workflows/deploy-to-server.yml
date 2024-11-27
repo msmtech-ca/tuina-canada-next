@@ -7,6 +7,11 @@ on:
     branches:
       - 'main'
   workflow_dispatch:
+
+permissions:
+  id-token: write      # Allows requesting the OIDC token
+  contents: read       # Allows actions like actions/checkout
+
 jobs:
   build:
     if: (github.event_name == 'workflow_dispatch') || github.event.pull_request.merged == true
@@ -27,44 +32,62 @@ jobs:
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::181933458132:role/GithubActions_msmtech.ca
+          aws-region: ca-central-1
+      
+      - uses: dkershner6/aws-ssm-getparameters-action@v2
+        with:
+          parameterPairs: |
+            /tuina-canada-next/cicd/deploy_host = DEPLOY_HOST,
+            /tuina-canada-next/cicd/deploy_user = DEPLOY_USER,
+            /tuina-canada-next/cicd/deploy_port = DEPLOY_PORT,
+            /tuina-canada-next/cicd/deploy_key = DEPLOY_KEY
+          # The part before equals is the ssm parameterName, and after is the ENV Variable name for the workflow.
+          # No limit on number of parameters. You can put new lines and spaces in as desired, they get trimmed out.
+          withDecryption: "true" # defaults to true
 
       - name: "Install SSH Key"
         uses: shimataro/ssh-key-action@v2
         with:
-          key: ${{ secrets.DEPLOY_KEY }} 
+          key: ${{ env.DEPLOY_KEY }} 
           known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
 
       - name: Adding Known Hosts
-        run: ssh-keyscan -H ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts
+        run: ssh-keyscan -H ${{ env.DEPLOY_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Install Chamber
+        run: |
+          curl -sSL -o chamber https://github.com/segmentio/chamber/releases/download/v3.1.0/chamber-v3.1.0-linux-amd64
+          chmod +x chamber
+          sudo mv chamber /usr/local/bin/chamber
 
       - name: "Install dependencies and build"
         working-directory: ./
-        env:
-          remote_host: ${{ secrets.DEPLOY_HOST }}
-          remote_port: ${{ secrets.DEPLOY_PORT }}
-          remote_user: ${{ secrets.DEPLOY_USER }}
-          dev_env_file: ${{ secrets.DEV_ENV_FILE }}
-          local_dir: "./"
-          remote_dir: "/var/www/tuinaducanada-next"
         run: |
           npm ci
           unset CI
-          echo "${{ secrets.DEV_ENV_FILE }}" > .env
-          chmod 600 .env
-          npm run build
+          chamber exec tuina-canada-next/prod -- npm run build
 
       - name: "Deploy to Server"
         working-directory: ./
         env:
-          remote_host: ${{ secrets.DEPLOY_HOST }}
-          remote_port: ${{ secrets.DEPLOY_PORT }}
-          remote_user: ${{ secrets.DEPLOY_USER }}
-          dev_env_file: ${{ secrets.DEV_ENV_FILE }}
           local_dir: "./"
           remote_dir: "/var/www/tuinaducanada-next"
         run: |
-          # Empty deployment folder with rsync
-          rsync -azvr --delete ${local_dir} ${remote_user}@${remote_host}:${remote_dir}
+          # Delete and rsync over files
+          rsync -azvr --delete ${local_dir} ${DEPLOY_USER}@${DEPLOY_HOST}:${remote_dir}
+
           # Run Prisma migrations
-          ssh ${remote_user}@${remote_host} "cd ${remote_dir} && pm2 stop tuinaducanada-next && npx prisma migrate deploy && pm2 start tuinaducanada-next --watch"
+          ssh ${DEPLOY_USER}@${DEPLOY_HOST} "
+            cd ${remote_dir} && \
+            pm2 stop tuina-canada-next && \
+            pm2 delete tuina-canada-next && \
+            chamber exec tuina-canada-next/prod -- npx prisma migrate deploy && \
+            chamber exec tuina-canada-next/prod -- npx prisma generate && \
+            chamber exec tuina-canada-next/prod -- pm2 start npm --name tuina-canada-next -- run start
+          "
