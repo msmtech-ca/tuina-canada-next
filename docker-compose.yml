@@ -30,7 +30,17 @@ services:
     ports:
       - "3000:3000"
     environment:
-      DATABASE_URL: "mysql://root:rootpassword@database:3306/main"
+      APP_SECRET: ${APP_SECRET}
+      DATABASE_URL: ${DATABASE_URL}
+      NEXT_PUBLIC_API_ROUTE: ${NEXT_PUBLIC_API_ROUTE}
+      NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: ${NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}
+      NEXT_PUBLIC_HOST: ${NEXT_PUBLIC_HOST}
+      REDIS_URL: ${REDIS_URL}
+      SMTP_HOST: ${SMTP_HOST}
+      SMTP_PASS: ${SMTP_PASS}
+      SMTP_PORT: ${SMTP_PORT}
+      SMTP_USER: ${SMTP_USER}
+      TRANSACTIONAL_EMAIL_FROM: ${TRANSACTIONAL_EMAIL_FROM}
     working_dir: /app
     volumes:
       - .:/app
