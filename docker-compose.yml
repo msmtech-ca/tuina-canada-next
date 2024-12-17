@@ -30,8 +30,11 @@ services:
     ports:
       - "3000:3000"
     environment:
+      # Hardcoded environment variables
+      DATABASE_URL: "mysql://root:rootpassword@database:3306/main" # This needs to be hardcoded because the DB can't be accessed through the host machine's localhost, it can only be accessed through the internal named docker network.
+
+      # Environment variables pulled from AWS
       APP_SECRET: ${APP_SECRET}
-      DATABASE_URL: ${DATABASE_URL}
       NEXT_PUBLIC_API_ROUTE: ${NEXT_PUBLIC_API_ROUTE}
       NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: ${NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}
       NEXT_PUBLIC_HOST: ${NEXT_PUBLIC_HOST}
