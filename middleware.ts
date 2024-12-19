@@ -1,12 +1,23 @@
 import { type NextRequest, NextResponse } from 'next/server';
 import acceptLanguage from 'accept-language'
 import { cookieName, fallbackLng, languages } from './app/_components/i18n/settings'
+import { redirects } from './src/lib/redirects';
 
 acceptLanguage.languages(languages)
 
 export async function middleware(req: NextRequest) {
 
     const response = NextResponse.next()
+
+    try {
+        if (redirects[req.nextUrl.pathname]) {
+            console.log(`Middleware Redirect on: ${req.url ?? `null req.url`} -> to: ${redirects[req.nextUrl.pathname]}`)
+            return NextResponse.redirect(new URL(redirects[req.nextUrl.pathname], req.url), 301)
+        }
+    } catch (error) {
+        console.error('Middleware hard-coded redirect error:', error);
+        return response;
+    }
 
     try {
         let lng
