@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "ddev": "aws-vault exec main -- chamber exec tuina-canada-next/dev -- docker compose up",
+    "d": "aws-vault exec main -- chamber exec tuina-canada-next/dev -- docker compose up",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
